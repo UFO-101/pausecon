@@ -6,11 +6,11 @@ export default function PauseConLanding() {
   const currentYear = new Date().getFullYear();
   
   const speakers = [
-    { name: 'Joep Meindertsma', title: 'founder of PauseAI' },
-    { name: 'Connor Leahy', title: 'CEO of Conjecture' },
-    { name: 'Robert Miles', title: 'YouTuber' },
-    { name: 'David Kreuger', title: 'Assistant Professor at the University of Montreal' },
-    { name: 'Tara Steele', title: 'Director of The Safe AI for Children Alliance' },
+    { name: 'Joep Meindertsma', title: 'founder of PauseAI', image: '/JoepMeindertsma.jpg' },
+    { name: 'Connor Leahy', title: 'CEO of Conjecture', image: '/ConnorLeahy.png' },
+    { name: 'Robert Miles', title: 'YouTuber', image: '/RobertMiles.png' },
+    { name: 'David Kreuger', title: 'Assistant Professor at the University of Montreal', image: '/DavidKrueger.png' },
+    { name: 'Tara Steele', title: 'Director of The Safe AI for Children Alliance', image: '/TaraSteele.jpeg' },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -264,20 +264,30 @@ export default function PauseConLanding() {
               }}
             >
               <div style={{ 
-                width: '80px', 
-                height: '80px', 
-                backgroundColor: '#ccc', 
+                width: '120px', 
+                height: '120px', 
                 borderRadius: '50%',
-                margin: '0 auto 1rem',
-                border: '4px solid rgba(254, 148, 21, 0.4)'
-              }} />
+                margin: '0 auto 0.5rem',
+                overflow: 'hidden'
+              }}>
+                <img 
+                  src={speaker.image} 
+                  alt={speaker.name}
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    filter: 'grayscale(100%)'
+                  }} 
+                />
+              </div>
               <h3 style={{ 
                 fontSize: '1.25rem', 
                 fontWeight: 'bold', 
                 marginBottom: '0.5rem',
                 overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap',
+                wordWrap: 'break-word',
+                textAlign: 'center',
                 color: '#F1F1F1'
               }}>
                 {speaker.name}
@@ -286,10 +296,9 @@ export default function PauseConLanding() {
                 fontSize: '0.875rem', 
                 color: '#B0B0B0',
                 overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                display: '-webkit-box',
-                WebkitLineClamp: '2',
-                WebkitBoxOrient: 'vertical'
+                wordWrap: 'break-word',
+                textAlign: 'center',
+                display: 'block'
               }}>
                 {speaker.title}
               </p>
