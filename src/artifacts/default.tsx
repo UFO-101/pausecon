@@ -39,9 +39,15 @@ export default function PauseConLanding() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: '#1D1D1D', color: '#F1F1F1', minHeight: '100vh', fontFamily: 'Red Hat Display, sans-serif' }}>
+    <div style={{ 
+      background: 'radial-gradient(circle at top right, #3E6990 0%, #000000 60%)', 
+      backgroundAttachment: 'fixed',
+      color: '#F1F1F1', 
+      minHeight: '100vh', 
+      fontFamily: 'Red Hat Display, sans-serif' 
+    }}>
       {/* Navigation */}
-      <nav style={{ position: 'fixed', width: '100%', top: 0, left: 0, backgroundColor: '#000000', padding: '1rem', zIndex: 1000 }}>
+      <nav style={{ position: 'fixed', width: '100%', top: 0, left: 0, backgroundColor: '#1D1D1D', padding: '1rem', zIndex: 1000 }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <a href="#home" onClick={(e) => scrollToSection(e, 'home')} style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none', color: '#F1F1F1' }}>
             <img src="/Pause Logo.svg" alt="PauseCon Logo" style={{ width: '36px', height: '36px' }} />
@@ -135,7 +141,7 @@ export default function PauseConLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" style={{ paddingTop: '10rem', paddingBottom: '5rem', textAlign: 'center', backgroundColor: '#1D1D1D', padding: '10rem 1rem 5rem' }}>
+      <section id="home" style={{ paddingTop: '10rem', paddingBottom: '5rem', textAlign: 'center', padding: '10rem 1rem 5rem', background: 'rgba(0, 0, 0, 0.2)' }}>
         <h1 style={{ fontSize: isMobile ? '3rem' : '6rem', fontWeight: '600', marginBottom: '0rem' }}>PauseCon</h1>
         <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: '400', marginBottom: '2rem' }}>London 2025</h2>
         
@@ -192,7 +198,7 @@ export default function PauseConLanding() {
       </section>
 
       {/* About Section */}
-      <section id="about" style={{ padding: '5rem 2rem', backgroundColor: '#1A1A1A' }}>
+      <section id="about" style={{ padding: '5rem 2rem', background: 'rgba(26, 26, 26, 0.3)' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '2rem', textAlign: 'center' }}>
             About PauseCon
@@ -235,7 +241,7 @@ export default function PauseConLanding() {
       </section>
 
       {/* Speakers Section */}
-      <section id="speakers" style={{ padding: '5rem 2rem', backgroundColor: '#000000' }}>
+      <section id="speakers" style={{ padding: '5rem 2rem', background: 'rgba(0, 0, 0, 0.4)' }}>
         <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: '#F1F1F1' }}>
           Featured Speakers
         </h2>
@@ -308,7 +314,7 @@ export default function PauseConLanding() {
       </section>
 
       {/* Schedule Section */}
-      <section id="schedule" style={{ padding: '5rem 2rem', backgroundColor: '#0F0F0F' }}>
+      <section id="schedule" style={{ padding: '5rem 2rem', background: 'rgba(15, 15, 15, 0.3)' }}>
         <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: '#F1F1F1' }}>
           What to Expect
         </h2>
@@ -395,7 +401,7 @@ export default function PauseConLanding() {
       </section>
 
       {/* CTA Section */}
-      <section style={{ padding: '5rem 2rem', textAlign: 'center', backgroundColor: '#1D1D1D' }}>
+      <section style={{ padding: '5rem 2rem', textAlign: 'center', background: 'rgba(0, 0, 0, 0.2)' }}>
         <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '2rem', color: '#F1F1F1' }}>Join Us in London</h2>
         <p style={{ fontSize: '1.25rem', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem', color: '#F1F1F1' }}>
           Be part of the movement to ensure AI development is safe. 
