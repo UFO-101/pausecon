@@ -6,12 +6,23 @@ export default function PauseConLanding() {
   const currentYear = new Date().getFullYear();
   
   const speakers = [
-    { name: 'Joep Meindertsma', title: 'Founder of PauseAI' },
+    { name: 'Joep Meindertsma', title: 'founder of PauseAI' },
     { name: 'Connor Leahy', title: 'CEO of Conjecture' },
     { name: 'Robert Miles', title: 'YouTuber' },
     { name: 'David Kreuger', title: 'Assistant Professor at the University of Montreal' },
     { name: 'Tara Steele', title: 'Director of The Safe AI for Children Alliance' },
   ];
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      if (isMobile) {
+        setIsMenuOpen(false);
+      }
+    }
+  };
 
   useEffect(() => {
     const checkMobile = () => {
@@ -24,18 +35,7 @@ export default function PauseConLanding() {
     checkMobile();
     window.addEventListener('resize', checkMobile);
     
-    const scrollToSection = (e, sectionId) => {
-    e.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      if (isMobile) {
-        setIsMenuOpen(false);
-      }
-    }
-  };
-
-  return () => window.removeEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   return (
