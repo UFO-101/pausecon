@@ -63,15 +63,15 @@ export default function PauseConLanding() {
                 target="_blank" 
                 rel="noopener noreferrer"
                 onMouseOver={(e) => {
-                  e.currentTarget.style.backgroundColor = '#FFF500';
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(255, 213, 0, 0.4)';
+                  e.currentTarget.style.backgroundColor = '#FE9415';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(254, 148, 21, 0.4)';
                 }}
                 onMouseOut={(e) => {
-                  e.currentTarget.style.backgroundColor = '#FFD500';
+                  e.currentTarget.style.backgroundColor = '#FE9415';
                   e.currentTarget.style.boxShadow = 'none';
                 }}
                 style={{ 
-                  backgroundColor: '#FFD500', 
+                  backgroundColor: '#FE9415', 
                   color: '#000000', 
                   padding: '0.5rem 1.5rem', 
                   borderRadius: '0.5rem', 
@@ -119,7 +119,7 @@ export default function PauseConLanding() {
               target="_blank" 
               rel="noopener noreferrer"
               style={{ 
-                backgroundColor: '#FFD500', 
+                backgroundColor: '#FE9415', 
                 color: '#000000', 
                 padding: '0.5rem 1.5rem', 
                 borderRadius: '0.5rem', 
@@ -165,18 +165,18 @@ export default function PauseConLanding() {
           target="_blank" 
           rel="noopener noreferrer"
           onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#FFF500';
-            e.currentTarget.style.boxShadow = '0 0 20px rgba(255, 213, 0, 0.4)';
+            e.currentTarget.style.backgroundColor = '#FE9415';
+            e.currentTarget.style.boxShadow = '0 0 20px rgba(254, 148, 21, 0.4)';
             e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#FFD500';
+            e.currentTarget.style.backgroundColor = '#FE9415';
             e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
           }}
           style={{ 
             display: 'inline-block',
-            backgroundColor: '#FFD500', 
+            backgroundColor: '#FE9415', 
             color: '#000000', 
             padding: isMobile ? '1rem 2rem' : '1.25rem 4rem', 
             fontSize: isMobile ? '1.25rem' : '1.5rem',
@@ -201,7 +201,7 @@ export default function PauseConLanding() {
             backgroundColor: '#333333', 
             padding: '2rem', 
             borderRadius: '1rem',
-            borderLeft: '4px solid #FFD500'
+            borderLeft: '4px solid #FE9415'
           }}>
             <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
               PauseCon is a development and training event for anyone interested in volunteering for PauseAI, 
@@ -220,7 +220,7 @@ export default function PauseConLanding() {
             </p>
           </div>
           <div style={{ 
-            backgroundColor: '#FFD500', 
+            backgroundColor: '#FE9415', 
             color: '#000000', 
             padding: '1.5rem', 
             marginTop: '2rem',
@@ -269,7 +269,7 @@ export default function PauseConLanding() {
                 backgroundColor: '#ccc', 
                 borderRadius: '50%',
                 margin: '0 auto 1rem',
-                border: '4px solid rgba(255, 213, 0, 0.4)'
+                border: '4px solid rgba(254, 148, 21, 0.4)'
               }} />
               <h3 style={{ 
                 fontSize: '1.25rem', 
@@ -314,7 +314,7 @@ export default function PauseConLanding() {
             backgroundColor: '#1A1A1A', 
             padding: '2rem', 
             borderRadius: '0.5rem',
-            borderTop: '4px solid #FFD500'
+            borderTop: '4px solid #FE9415'
           }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#F1F1F1' }}>Training Sessions</h3>
             <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -350,7 +350,7 @@ export default function PauseConLanding() {
             backgroundColor: '#1A1A1A', 
             padding: '2rem', 
             borderRadius: '0.5rem',
-            borderTop: '4px solid #FFD500'
+            borderTop: '4px solid #FE9415'
           }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#F1F1F1' }}>Key Events</h3>
             <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -396,18 +396,18 @@ export default function PauseConLanding() {
           target="_blank" 
           rel="noopener noreferrer"
           onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#FFF500';
-            e.currentTarget.style.boxShadow = '0 0 20px rgba(255, 213, 0, 0.4)';
+            e.currentTarget.style.backgroundColor = '#FE9415';
+            e.currentTarget.style.boxShadow = '0 0 20px rgba(254, 148, 21, 0.4)';
             e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#FFD500';
+            e.currentTarget.style.backgroundColor = '#FE9415';
             e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
           }}
           style={{ 
             display: 'inline-block',
-            backgroundColor: '#FFD500', 
+            backgroundColor: '#FE9415', 
             color: '#000000', 
             padding: isMobile ? '1rem 2rem' : '1.25rem 4rem', 
             fontSize: isMobile ? '1.25rem' : '1.5rem',
