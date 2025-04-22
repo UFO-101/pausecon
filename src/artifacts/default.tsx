@@ -44,7 +44,7 @@ export default function PauseConLanding() {
       <nav style={{ position: 'fixed', width: '100%', top: 0, left: 0, backgroundColor: '#000000', padding: '1rem', zIndex: 1000 }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <a href="#home" onClick={(e) => scrollToSection(e, 'home')} style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none', color: '#F1F1F1' }}>
-            <img src="/Pause Logo.svg" alt="PauseCon Logo" style={{ width: '40px', height: '40px' }} />
+            <img src="/Pause Logo.svg" alt="PauseCon Logo" style={{ width: '36px', height: '36px' }} />
             <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>PauseCon</span>
           </a>
           
@@ -236,7 +236,7 @@ export default function PauseConLanding() {
 
       {/* Speakers Section */}
       <section id="speakers" style={{ padding: '5rem 2rem', backgroundColor: '#000000' }}>
-        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center' }}>
+        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: '#F1F1F1' }}>
           Featured Speakers
         </h2>
         <div style={{ 
@@ -277,7 +277,8 @@ export default function PauseConLanding() {
                 marginBottom: '0.5rem',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
-                whiteSpace: 'nowrap'
+                whiteSpace: 'nowrap',
+                color: '#F1F1F1'
               }}>
                 {speaker.name}
               </h3>
@@ -299,7 +300,7 @@ export default function PauseConLanding() {
 
       {/* Schedule Section */}
       <section id="schedule" style={{ padding: '5rem 2rem', backgroundColor: '#0F0F0F' }}>
-        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center' }}>
+        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: '#F1F1F1' }}>
           What to Expect
         </h2>
         <div style={{ 
@@ -315,7 +316,7 @@ export default function PauseConLanding() {
             borderRadius: '0.5rem',
             borderTop: '4px solid #FFD500'
           }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>Training Sessions</h3>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#F1F1F1' }}>Training Sessions</h3>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ 
                 backgroundColor: '#2A2A2A', 
@@ -351,7 +352,7 @@ export default function PauseConLanding() {
             borderRadius: '0.5rem',
             borderTop: '4px solid #FFD500'
           }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>Key Events</h3>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#F1F1F1' }}>Key Events</h3>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ 
                 backgroundColor: '#2A2A2A', 
@@ -386,8 +387,8 @@ export default function PauseConLanding() {
 
       {/* CTA Section */}
       <section style={{ padding: '5rem 2rem', textAlign: 'center', backgroundColor: '#1D1D1D' }}>
-        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '2rem' }}>Join Us in London</h2>
-        <p style={{ fontSize: '1.25rem', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem' }}>
+        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '2rem', color: '#F1F1F1' }}>Join Us in London</h2>
+        <p style={{ fontSize: '1.25rem', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem', color: '#F1F1F1' }}>
           Be part of the movement to ensure AI development is safe. 
         </p>
         <a 
