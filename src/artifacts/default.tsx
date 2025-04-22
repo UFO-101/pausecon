@@ -45,7 +45,7 @@ export default function PauseConLanding() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <a href="#home" onClick={(e) => scrollToSection(e, 'home')} style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none', color: '#F1F1F1' }}>
             <img src="/Pause Logo.svg" alt="PauseCon Logo" style={{ width: '36px', height: '36px' }} />
-            <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>PauseCon</span>
+            <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
           </a>
           
           {/* Desktop Menu */}
@@ -136,8 +136,8 @@ export default function PauseConLanding() {
 
       {/* Hero Section */}
       <section id="home" style={{ paddingTop: '10rem', paddingBottom: '5rem', textAlign: 'center', backgroundColor: '#1D1D1D', padding: '10rem 1rem 5rem' }}>
-        <h1 style={{ fontSize: isMobile ? '3rem' : '6rem', fontWeight: '900', marginBottom: '1rem' }}>PauseCon</h1>
-        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: '600', marginBottom: '2rem' }}>London 2025</h2>
+        <h1 style={{ fontSize: isMobile ? '3rem' : '6rem', fontWeight: '600', marginBottom: '0rem' }}>PauseCon</h1>
+        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: '400', marginBottom: '2rem' }}>London 2025</h2>
         
         <div style={{ 
           maxWidth: '800px', 
@@ -209,7 +209,7 @@ export default function PauseConLanding() {
             </p>
             <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
               Attendees at PauseCon London will receive training in community building, social media strategy 
-              and digital organizing. Connor Leahy, founder of Conjecture, will give a talk on AI governance 
+              and digital organizing. Connor Leahy, Founder of Conjecture, will give a talk on AI governance 
               and there will be a panel of 5 leaders in AI governance, discussing public communication of AI risks.
             </p>
             <p style={{ lineHeight: '1.6' }}>
