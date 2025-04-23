@@ -1,5 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
+const colors = {
+  primary: '#FE9415', // Orange accent color
+  accent: '#3E6990', // Blue gradient color
+  background: '#000000', // Pure black
+  navBackground: '#1D1D1D', // Dark gray for nav
+  text: '#F1F1F1', // Light gray text
+  subtext: '#B0B0B0', // Gray text for subtitles
+  cardBackground: '#333333', // Dark gray for cards
+  cardBorder: '#444444', // Border color for cards
+  white: '#FFFFFF', // Pure white
+  darkSection: '#0F0F0F', // Dark section background
+  cardDark: '#2A2A2A', // Darker card background
+};
+
 export default function PauseConLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -42,14 +56,14 @@ export default function PauseConLanding() {
     <div style={{ 
       background: 'radial-gradient(circle at top right, #3E6990 0%, #000000 60%)', 
       backgroundAttachment: 'fixed',
-      color: '#F1F1F1', 
+      color: colors.text, 
       minHeight: '100vh', 
       fontFamily: 'Red Hat Display, sans-serif' 
     }}>
       {/* Navigation */}
-      <nav style={{ position: 'fixed', width: '100%', top: 0, left: 0, backgroundColor: '#1D1D1D', padding: '1rem', zIndex: 1000 }}>
+      <nav style={{ position: 'fixed', width: '100%', top: 0, left: 0, backgroundColor: colors.navBackground, padding: '1rem', zIndex: 1000 }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <a href="#home" onClick={(e) => scrollToSection(e, 'home')} style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none', color: '#F1F1F1' }}>
+          <a href="#home" onClick={(e) => scrollToSection(e, 'home')} style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none', color: colors.text }}>
             <img src="/Pause Logo.svg" alt="PauseCon Logo" style={{ width: '36px', height: '36px' }} />
             <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
           </a>
@@ -61,24 +75,24 @@ export default function PauseConLanding() {
               gap: '2rem', 
               alignItems: 'center' 
             }}>
-              <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: '#F1F1F1', textDecoration: 'none' }}>About</a>
-              <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: '#F1F1F1', textDecoration: 'none' }}>Speakers</a>
-              <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: '#F1F1F1', textDecoration: 'none' }}>Schedule</a>
+              <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: colors.text, textDecoration: 'none' }}>About</a>
+              <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a>
+              <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a>
               <a 
                 href="https://lu.ma/hmrkdm0u" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 onMouseOver={(e) => {
-                  e.currentTarget.style.backgroundColor = '#FE9415';
+                  e.currentTarget.style.backgroundColor = colors.primary;
                   e.currentTarget.style.boxShadow = '0 0 20px rgba(254, 148, 21, 0.4)';
                 }}
                 onMouseOut={(e) => {
-                  e.currentTarget.style.backgroundColor = '#FE9415';
+                  e.currentTarget.style.backgroundColor = colors.primary;
                   e.currentTarget.style.boxShadow = 'none';
                 }}
                 style={{ 
-                  backgroundColor: '#FE9415', 
-                  color: '#FFFFFF', 
+                  backgroundColor: colors.primary, 
+                  color: colors.white, 
                   padding: '0.5rem 1.5rem', 
                   borderRadius: '0.5rem', 
                   fontWeight: 'bold',
@@ -98,7 +112,7 @@ export default function PauseConLanding() {
               style={{ 
                 background: 'none',
                 border: 'none',
-                color: '#F1F1F1',
+                color: colors.text,
                 fontSize: '1.5rem',
                 cursor: 'pointer'
               }}
@@ -111,22 +125,22 @@ export default function PauseConLanding() {
         {/* Mobile Menu */}
         {isMenuOpen && isMobile && (
           <div style={{ 
-            backgroundColor: '#000000',
+            backgroundColor: colors.background,
             padding: '1rem',
             display: 'flex',
             flexDirection: 'column',
             gap: '1rem'
           }}>
-            <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: '#F1F1F1', textDecoration: 'none' }}>About</a>
-            <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: '#F1F1F1', textDecoration: 'none' }}>Speakers</a>
-            <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: '#F1F1F1', textDecoration: 'none' }}>Schedule</a>
+            <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: colors.text, textDecoration: 'none' }}>About</a>
+            <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a>
+            <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a>
             <a 
               href="https://lu.ma/hmrkdm0u" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ 
-                backgroundColor: '#FE9415', 
-                color: '#FFFFFF', 
+                backgroundColor: colors.primary, 
+                color: colors.white, 
                 padding: '0.5rem 1.5rem', 
                 borderRadius: '0.5rem', 
                 fontWeight: 'bold',
@@ -171,19 +185,19 @@ export default function PauseConLanding() {
           target="_blank" 
           rel="noopener noreferrer"
           onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#FE9415';
+            e.currentTarget.style.backgroundColor = colors.primary;
             e.currentTarget.style.boxShadow = '0 0 20px rgba(254, 148, 21, 0.4)';
             e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#FE9415';
+            e.currentTarget.style.backgroundColor = colors.primary;
             e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
           }}
           style={{ 
             display: 'inline-block',
-            backgroundColor: '#FE9415', 
-            color: '#FFFFFF', 
+            backgroundColor: colors.primary, 
+            color: colors.white, 
             padding: isMobile ? '1rem 2rem' : '1.25rem 4rem', 
             fontSize: isMobile ? '1.25rem' : '1.5rem',
             borderRadius: '0.5rem', 
@@ -204,10 +218,10 @@ export default function PauseConLanding() {
             About PauseCon
           </h2>
           <div style={{ 
-            backgroundColor: '#333333', 
+            backgroundColor: colors.cardBackground, 
             padding: '2rem', 
             borderRadius: '1rem',
-            borderLeft: '4px solid #FE9415'
+            borderLeft: '4px solid ' + colors.primary
           }}>
             <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
               PauseCon is a development and training event for anyone interested in volunteering for PauseAI, 
@@ -226,8 +240,8 @@ export default function PauseConLanding() {
             </p>
           </div>
           <div style={{ 
-            backgroundColor: '#FE9415', 
-            color: '#FFFFFF', 
+            backgroundColor: colors.primary, 
+            color: colors.white, 
             padding: '1.5rem', 
             marginTop: '2rem',
             borderRadius: '0.5rem',
@@ -242,7 +256,7 @@ export default function PauseConLanding() {
 
       {/* Speakers Section */}
       <section id="speakers" style={{ padding: '5rem 2rem', background: 'rgba(0, 0, 0, 0.4)' }}>
-        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: '#F1F1F1' }}>
+        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: colors.text }}>
           Featured Speakers
         </h2>
         <div style={{ 
@@ -260,10 +274,10 @@ export default function PauseConLanding() {
             <div 
               key={index} 
               style={{ 
-                backgroundColor: '#222222', 
+                backgroundColor: colors.cardBackground, 
                 padding: '1.5rem', 
                 borderRadius: '0.5rem',
-                border: '2px solid #444444',
+                border: '2px solid ' + colors.cardBorder,
                 textAlign: 'center',
                 minWidth: '0', // Prevent grid item from overflowing
                 overflow: 'hidden'
@@ -294,13 +308,13 @@ export default function PauseConLanding() {
                 overflow: 'hidden',
                 wordWrap: 'break-word',
                 textAlign: 'center',
-                color: '#F1F1F1'
+                color: colors.text
               }}>
                 {speaker.name}
               </h3>
               <p style={{ 
                 fontSize: '0.875rem', 
-                color: '#B0B0B0',
+                color: colors.subtext,
                 overflow: 'hidden',
                 wordWrap: 'break-word',
                 textAlign: 'center',
@@ -315,7 +329,7 @@ export default function PauseConLanding() {
 
       {/* Schedule Section */}
       <section id="schedule" style={{ padding: '5rem 2rem', background: 'rgba(15, 15, 15, 0.3)' }}>
-        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: '#F1F1F1' }}>
+        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: colors.text }}>
           What to Expect
         </h2>
         <div style={{ 
@@ -326,72 +340,72 @@ export default function PauseConLanding() {
           margin: '0 auto'
         }}>
           <div style={{ 
-            backgroundColor: '#1A1A1A', 
+            backgroundColor: colors.cardBackground, 
             padding: '2rem', 
             borderRadius: '0.5rem',
-            borderTop: '4px solid #FE9415'
+            borderTop: '4px solid ' + colors.primary
           }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#F1F1F1' }}>Training Sessions</h3>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: colors.text }}>Training Sessions</h3>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ 
-                backgroundColor: '#2A2A2A', 
+                backgroundColor: colors.cardDark, 
                 padding: '1rem', 
                 marginBottom: '1rem',
                 borderRadius: '0.25rem',
-                border: '1px solid #444444'
+                border: '1px solid ' + colors.cardBorder
               }}>
                 Community Building Workshops
               </li>
               <li style={{ 
-                backgroundColor: '#2A2A2A', 
+                backgroundColor: colors.cardDark, 
                 padding: '1rem', 
                 marginBottom: '1rem',
                 borderRadius: '0.25rem',
-                border: '1px solid #444444'
+                border: '1px solid ' + colors.cardBorder
               }}>
                 Social Media Strategy
               </li>
               <li style={{ 
-                backgroundColor: '#2A2A2A', 
+                backgroundColor: colors.cardDark, 
                 padding: '1rem', 
                 borderRadius: '0.25rem',
-                border: '1px solid #444444'
+                border: '1px solid ' + colors.cardBorder
               }}>
                 Digital Organizing Techniques
               </li>
             </ul>
           </div>
           <div style={{ 
-            backgroundColor: '#1A1A1A', 
+            backgroundColor: colors.cardBackground, 
             padding: '2rem', 
             borderRadius: '0.5rem',
-            borderTop: '4px solid #FE9415'
+            borderTop: '4px solid ' + colors.primary
           }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#F1F1F1' }}>Key Events</h3>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: colors.text }}>Key Events</h3>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ 
-                backgroundColor: '#2A2A2A', 
+                backgroundColor: colors.cardDark, 
                 padding: '1rem', 
                 marginBottom: '1rem',
                 borderRadius: '0.25rem',
-                border: '1px solid #444444'
+                border: '1px solid ' + colors.cardBorder
               }}>
                 AI Governance Talk by Connor Leahy
               </li>
               <li style={{ 
-                backgroundColor: '#2A2A2A', 
+                backgroundColor: colors.cardDark, 
                 padding: '1rem', 
                 marginBottom: '1rem',
                 borderRadius: '0.25rem',
-                border: '1px solid #444444'
+                border: '1px solid ' + colors.cardBorder
               }}>
                 Panel: Public Communication of AI Risks
               </li>
               <li style={{ 
-                backgroundColor: '#2A2A2A', 
+                backgroundColor: colors.cardDark, 
                 padding: '1rem', 
                 borderRadius: '0.25rem',
-                border: '1px solid #444444'
+                border: '1px solid ' + colors.cardBorder
               }}>
                 Largest PauseAI Protest to Date
               </li>
@@ -402,8 +416,8 @@ export default function PauseConLanding() {
 
       {/* CTA Section */}
       <section style={{ padding: '5rem 2rem', textAlign: 'center', background: 'rgba(0, 0, 0, 0.2)' }}>
-        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '2rem', color: '#F1F1F1' }}>Join Us in London</h2>
-        <p style={{ fontSize: '1.25rem', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem', color: '#F1F1F1' }}>
+        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '2rem', color: colors.text }}>Join Us in London</h2>
+        <p style={{ fontSize: '1.25rem', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem', color: colors.text }}>
           Be part of the movement to ensure AI development is safe. 
         </p>
         <a 
@@ -411,19 +425,19 @@ export default function PauseConLanding() {
           target="_blank" 
           rel="noopener noreferrer"
           onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#FE9415';
+            e.currentTarget.style.backgroundColor = colors.primary;
             e.currentTarget.style.boxShadow = '0 0 20px rgba(254, 148, 21, 0.4)';
             e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#FE9415';
+            e.currentTarget.style.backgroundColor = colors.primary;
             e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
           }}
           style={{ 
             display: 'inline-block',
-            backgroundColor: '#FE9415', 
-            color: '#FFFFFF', 
+            backgroundColor: colors.primary, 
+            color: colors.white, 
             padding: isMobile ? '1rem 2rem' : '1.25rem 4rem', 
             fontSize: isMobile ? '1.25rem' : '1.5rem',
             borderRadius: '0.5rem', 
@@ -438,9 +452,9 @@ export default function PauseConLanding() {
       </section>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: '#000000', padding: '2rem', textAlign: 'center' }}>
+      <footer style={{ backgroundColor: colors.background, padding: '2rem', textAlign: 'center' }}>
         {/* <p style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>PauseCon</p> */}
-        <p style={{ fontSize: '0.875rem', color: '#B0B0B0' }}>© {currentYear} PauseCon</p>
+        <p style={{ fontSize: '0.875rem', color: colors.subtext }}>© {currentYear} PauseCon</p>
       </footer>
     </div>
   );
