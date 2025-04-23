@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const colors = {
-  primary: '#FE9415', // Orange accent color
+  primary: 'rgb(255 144 11)', // Orange accent color
   accent: '#3E6990', // Blue gradient color
   background: '#000000', // Pure black
   navBackground: '#1D1D1D', // Dark gray for nav
