@@ -7,7 +7,7 @@ const colors = {
   navBackground: '#1D1D1D', // Dark gray for nav
   text: '#F1F1F1', // Light gray text
   subtext: '#B0B0B0', // Gray text for subtitles
-  cardBackground: '#333333', // Dark gray for cards
+  cardBackground: 'rgb(21 21 21)', // Dark gray for cards
   cardBorder: '#444444', // Border color for cards
   white: '#FFFFFF', // Pure white
   darkSection: '#0F0F0F', // Dark section background
