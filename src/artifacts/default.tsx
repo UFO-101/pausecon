@@ -23,6 +23,7 @@ export default function PauseConLanding() {
     { name: 'Joep Meindertsma', title: 'founder of PauseAI', image: '/JoepMeindertsma.jpg' },
     { name: 'Connor Leahy', title: 'CEO of Conjecture', image: '/ConnorLeahy.png' },
     { name: 'Robert Miles', title: 'YouTuber', image: '/RobertMiles.png' },
+    { name: 'Kat Woods', title: 'Founder of Nonlinear and Charity Entrepreneurship', image: '/KatWoods.jpg' },
     { name: 'David Krueger', title: 'Assistant Professor at the University of Montreal', image: '/DavidKrueger.png' },
     { name: 'Tara Steele', title: 'Director of The Safe AI for Children Alliance', image: '/TaraSteele.jpeg' },
   ];
@@ -262,12 +263,12 @@ export default function PauseConLanding() {
         <div style={{ 
           display: 'grid', 
           gridTemplateColumns: 
-            window.innerWidth > 1200 ? 'repeat(5, 1fr)' : 
+            window.innerWidth > 1200 ? 'repeat(6, 1fr)' : 
             window.innerWidth > 900 ? 'repeat(3, 1fr)' : 
             window.innerWidth > 600 ? 'repeat(2, 1fr)' : 
             '1fr',
           gap: '1.5rem',
-          maxWidth: '1200px',
+          maxWidth: '1600px',
           margin: '0 auto'
         }}>
           {speakers.map((speaker, index) => (
