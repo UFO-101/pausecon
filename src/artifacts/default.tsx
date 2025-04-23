@@ -9,7 +9,7 @@ export default function PauseConLanding() {
     { name: 'Joep Meindertsma', title: 'founder of PauseAI', image: '/JoepMeindertsma.jpg' },
     { name: 'Connor Leahy', title: 'CEO of Conjecture', image: '/ConnorLeahy.png' },
     { name: 'Robert Miles', title: 'YouTuber', image: '/RobertMiles.png' },
-    { name: 'David Kreuger', title: 'Assistant Professor at the University of Montreal', image: '/DavidKrueger.png' },
+    { name: 'David Krueger', title: 'Assistant Professor at the University of Montreal', image: '/DavidKrueger.png' },
     { name: 'Tara Steele', title: 'Director of The Safe AI for Children Alliance', image: '/TaraSteele.jpeg' },
   ];
 
