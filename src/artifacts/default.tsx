@@ -78,7 +78,7 @@ export default function PauseConLanding() {
                 }}
                 style={{ 
                   backgroundColor: '#FE9415', 
-                  color: '#000000', 
+                  color: '#FFFFFF', 
                   padding: '0.5rem 1.5rem', 
                   borderRadius: '0.5rem', 
                   fontWeight: 'bold',
@@ -126,7 +126,7 @@ export default function PauseConLanding() {
               rel="noopener noreferrer"
               style={{ 
                 backgroundColor: '#FE9415', 
-                color: '#000000', 
+                color: '#FFFFFF', 
                 padding: '0.5rem 1.5rem', 
                 borderRadius: '0.5rem', 
                 fontWeight: 'bold',
@@ -183,7 +183,7 @@ export default function PauseConLanding() {
           style={{ 
             display: 'inline-block',
             backgroundColor: '#FE9415', 
-            color: '#000000', 
+            color: '#FFFFFF', 
             padding: isMobile ? '1rem 2rem' : '1.25rem 4rem', 
             fontSize: isMobile ? '1.25rem' : '1.5rem',
             borderRadius: '0.5rem', 
@@ -227,7 +227,7 @@ export default function PauseConLanding() {
           </div>
           <div style={{ 
             backgroundColor: '#FE9415', 
-            color: '#000000', 
+            color: '#FFFFFF', 
             padding: '1.5rem', 
             marginTop: '2rem',
             borderRadius: '0.5rem',
@@ -423,7 +423,7 @@ export default function PauseConLanding() {
           style={{ 
             display: 'inline-block',
             backgroundColor: '#FE9415', 
-            color: '#000000', 
+            color: '#FFFFFF', 
             padding: isMobile ? '1rem 2rem' : '1.25rem 4rem', 
             fontSize: isMobile ? '1.25rem' : '1.5rem',
             borderRadius: '0.5rem', 
