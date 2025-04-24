@@ -28,6 +28,13 @@ export default function PauseConLanding() {
     { name: 'Tara Steele', title: 'Director of The Safe AI for Children Alliance', image: '/TaraSteele.jpg' },
   ];
 
+  const team = [
+    { name: 'Joseph Miller', title: 'Director, PauseAI UK', image: '/JosephMiller.jpg' },
+    { name: 'Ella Hughes', title: 'Organizing Director, PauseAI Global', image: '/EllaHughes.jpg' },
+    { name: 'Tom Bibby', title: 'Communications Director, PauseAI Global', image: '/TomBibby.jpg' },
+    { name: 'Patricio Vercesi', title: 'Online Coordinator, PauseAI Global', image: '/PatricioVercesi.jpg' },
+  ];
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault();
     const element = document.getElementById(sectionId);
@@ -467,121 +474,39 @@ export default function PauseConLanding() {
           maxWidth: '1600px',
           margin: '0 auto'
         }}>
-          <div style={{ 
-            backgroundColor: colors.cardBackground, 
-            padding: '2rem', 
-            borderRadius: '0.5rem',
-            border: '2px solid ' + colors.cardBorder,
-            textAlign: 'center'
-          }}>
-            <div style={{ 
-              width: '150px', 
-              height: '150px', 
-              borderRadius: '50%',
-              margin: '0 auto 1rem',
-              overflow: 'hidden'
-            }}>
-              <img 
-                src="/JosephMiller.jpg" 
-                alt="Joseph Miller"
-                style={{ 
-                  width: '100%', 
-                  height: '100%', 
-                  objectFit: 'cover',
-                  filter: 'grayscale(100%)'
-                }} 
-              />
+          {team.map((member, index) => (
+            <div 
+              key={index}
+              style={{ 
+                backgroundColor: colors.cardBackground, 
+                padding: '2rem', 
+                borderRadius: '0.5rem',
+                border: '2px solid ' + colors.cardBorder,
+                textAlign: 'center'
+              }}
+            >
+              <div style={{ 
+                width: '150px', 
+                height: '150px', 
+                borderRadius: '50%',
+                margin: '0 auto 1rem',
+                overflow: 'hidden'
+              }}>
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    filter: 'grayscale(100%)'
+                  }} 
+                />
+              </div>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.text }}>{member.name}</h3>
+              <p style={{ fontSize: '1rem', color: colors.subtext }}>{member.title}</p>
             </div>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.text }}>Joseph Miller</h3>
-            <p style={{ fontSize: '1rem', color: colors.subtext }}>Director, PauseAI UK</p>
-          </div>
-
-          <div style={{ 
-            backgroundColor: colors.cardBackground, 
-            padding: '2rem', 
-            borderRadius: '0.5rem',
-            border: '2px solid ' + colors.cardBorder,
-            textAlign: 'center'
-          }}>
-            <div style={{ 
-              width: '150px', 
-              height: '150px', 
-              borderRadius: '50%',
-              margin: '0 auto 1rem',
-              overflow: 'hidden'
-            }}>
-              <img 
-                src="/EllaHughes.jpg" 
-                alt="Ella Hughes"
-                style={{ 
-                  width: '100%', 
-                  height: '100%', 
-                  objectFit: 'cover',
-                  filter: 'grayscale(100%)'
-                }} 
-              />
-            </div>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.text }}>Ella Hughes</h3>
-            <p style={{ fontSize: '1rem', color: colors.subtext }}>Organizing Director, PauseAI Global</p>
-          </div>
-
-          <div style={{ 
-            backgroundColor: colors.cardBackground, 
-            padding: '2rem', 
-            borderRadius: '0.5rem',
-            border: '2px solid ' + colors.cardBorder,
-            textAlign: 'center'
-          }}>
-            <div style={{ 
-              width: '150px', 
-              height: '150px', 
-              borderRadius: '50%',
-              margin: '0 auto 1rem',
-              overflow: 'hidden'
-            }}>
-              <img 
-                src="/TomBibby.jpg" 
-                alt="Tom Bibby"
-                style={{ 
-                  width: '100%', 
-                  height: '100%', 
-                  objectFit: 'cover',
-                  filter: 'grayscale(100%)'
-                }} 
-              />
-            </div>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.text }}>Tom Bibby</h3>
-            <p style={{ fontSize: '1rem', color: colors.subtext }}>Communications Director, PauseAI Global</p>
-          </div>
-
-          <div style={{ 
-            backgroundColor: colors.cardBackground, 
-            padding: '2rem', 
-            borderRadius: '0.5rem',
-            border: '2px solid ' + colors.cardBorder,
-            textAlign: 'center'
-          }}>
-            <div style={{ 
-              width: '150px', 
-              height: '150px', 
-              borderRadius: '50%',
-              margin: '0 auto 1rem',
-              overflow: 'hidden'
-            }}>
-              <img 
-                src="/PatricioVercesi.jpg" 
-                alt="Patricio Vercesi"
-                style={{ 
-                  width: '100%', 
-                  height: '100%', 
-                  objectFit: 'cover',
-                  filter: 'grayscale(100%)'
-                }} 
-              />
-            </div>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.text }}>Patricio Vercesi</h3>
-            <p style={{ fontSize: '1rem', color: colors.subtext }}>Online Coordinator, PauseAI Global</p>
-          </div>
+          ))}
         </div>
       </section>
 
