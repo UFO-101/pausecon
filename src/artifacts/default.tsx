@@ -29,10 +29,10 @@ export default function PauseConLanding() {
   ];
 
   const team = [
-    { name: 'Joseph Miller', title: 'Director, PauseAI UK', image: '/JosephMiller.jpg' },
-    { name: 'Ella Hughes', title: 'Organizing Director, PauseAI Global', image: '/EllaHughes.jpg' },
-    { name: 'Tom Bibby', title: 'Communications Director, PauseAI Global', image: '/TomBibby.jpg' },
-    { name: 'Patricio Vercesi', title: 'Online Coordinator, PauseAI Global', image: '/PatricioVercesi.jpg' },
+    { name: 'Joseph Miller', title: 'Director', org: 'PauseAI UK', image: '/JosephMiller.jpg' },
+    { name: 'Ella Hughes', title: 'Organizing Director', org: 'PauseAI Global', image: '/EllaHughes.jpg' },
+    { name: 'Tom Bibby', title: 'Communications Director', org: 'PauseAI Global', image: '/TomBibby.jpg' },
+    { name: 'Patricio Vercesi', title: 'Online Coordinator', org: 'PauseAI Global', image: '/PatricioVercesi.jpg' },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -295,7 +295,7 @@ export default function PauseConLanding() {
                 width: '120px', 
                 height: '120px', 
                 borderRadius: '50%',
-                margin: '0 auto 0.5rem',
+                margin: '0 auto 0.75rem',
                 overflow: 'hidden'
               }}>
                 <img 
@@ -471,7 +471,7 @@ export default function PauseConLanding() {
             window.innerWidth > 900 ? 'repeat(2, 1fr)' : 
             '1fr',
           gap: '2rem',
-          maxWidth: '1600px',
+          maxWidth: '1200px',
           margin: '0 auto'
         }}>
           {team.map((member, index) => (
@@ -479,17 +479,17 @@ export default function PauseConLanding() {
               key={index}
               style={{ 
                 backgroundColor: colors.cardBackground, 
-                padding: '2rem', 
+                padding: '1.5rem', 
                 borderRadius: '0.5rem',
                 border: '2px solid ' + colors.cardBorder,
                 textAlign: 'center'
               }}
             >
               <div style={{ 
-                width: '150px', 
-                height: '150px', 
+                width: '120px', 
+                height: '120px', 
                 borderRadius: '50%',
-                margin: '0 auto 1rem',
+                margin: '0 auto 0.75rem',
                 overflow: 'hidden'
               }}>
                 <img 
@@ -505,6 +505,7 @@ export default function PauseConLanding() {
               </div>
               <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.text }}>{member.name}</h3>
               <p style={{ fontSize: '1rem', color: colors.subtext }}>{member.title}</p>
+              <p style={{ fontSize: '1rem', color: colors.subtext }}>{member.org}</p>
             </div>
           ))}
         </div>
