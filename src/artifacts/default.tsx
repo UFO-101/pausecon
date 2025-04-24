@@ -4,7 +4,7 @@ const colors = {
   primary: 'rgb(255 144 11)', // Orange accent color
   accent: '#3E6990', // Blue gradient color
   background: '#000000', // Pure black
-  navBackground: '#1D1D1D', // Dark gray for nav
+  navBackground: '#000000', // Pure black for nav
   text: '#F1F1F1', // Light gray text
   subtext: '#B0B0B0', // Gray text for subtitles
   cardBackground: 'rgb(21 21 21)', // Dark gray for cards
@@ -69,7 +69,16 @@ export default function PauseConLanding() {
       fontFamily: 'Red Hat Display, sans-serif' 
     }}>
       {/* Navigation */}
-      <nav style={{ position: 'fixed', width: '100%', top: 0, left: 0, backgroundColor: colors.navBackground, padding: '1rem', zIndex: 1000 }}>
+      <nav style={{ 
+        position: 'fixed', 
+        width: '100%', 
+        top: 0, 
+        left: 0, 
+        backgroundColor: colors.navBackground, 
+        padding: '1rem', 
+        zIndex: 1000,
+        borderBottom: `1px solid ${colors.cardBorder}`
+      }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <a href="#home" onClick={(e) => scrollToSection(e, 'home')} style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none', color: colors.text }}>
             <img src="/Pause Logo.svg" alt="PauseCon Logo" style={{ width: '36px', height: '36px' }} />
