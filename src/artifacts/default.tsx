@@ -21,11 +21,11 @@ export default function PauseConLanding() {
   
   const speakers = [
     { name: 'Joep Meindertsma', title: 'founder of PauseAI', image: '/JoepMeindertsma.jpg' },
-    { name: 'Connor Leahy', title: 'CEO of Conjecture', image: '/ConnorLeahy.png' },
-    { name: 'Robert Miles', title: 'YouTuber', image: '/RobertMiles.png' },
+    { name: 'Connor Leahy', title: 'CEO of Conjecture', image: '/ConnorLeahy.jpg' },
+    { name: 'Robert Miles', title: 'YouTuber', image: '/RobertMiles.jpg' },
     { name: 'Kat Woods', title: 'Founder of Nonlinear and Charity Entrepreneurship', image: '/KatWoods.jpg' },
-    { name: 'David Krueger', title: 'Assistant Professor at the University of Montreal', image: '/DavidKrueger.png' },
-    { name: 'Tara Steele', title: 'Director of The Safe AI for Children Alliance', image: '/TaraSteele.jpeg' },
+    { name: 'David Krueger', title: 'Assistant Professor at the University of Montreal', image: '/DavidKrueger.jpg' },
+    { name: 'Tara Steele', title: 'Director of The Safe AI for Children Alliance', image: '/TaraSteele.jpg' },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -450,6 +450,139 @@ export default function PauseConLanding() {
         >
           Apply Now
         </a>
+      </section>
+
+      {/* Team Section */}
+      <section id="team" style={{ padding: '5rem 2rem', background: 'rgba(0, 0, 0, 0.4)' }}>
+        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: colors.text }}>
+          Our Team
+        </h2>
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 
+            window.innerWidth > 1200 ? 'repeat(4, 1fr)' : 
+            window.innerWidth > 900 ? 'repeat(2, 1fr)' : 
+            '1fr',
+          gap: '2rem',
+          maxWidth: '1600px',
+          margin: '0 auto'
+        }}>
+          <div style={{ 
+            backgroundColor: colors.cardBackground, 
+            padding: '2rem', 
+            borderRadius: '0.5rem',
+            border: '2px solid ' + colors.cardBorder,
+            textAlign: 'center'
+          }}>
+            <div style={{ 
+              width: '150px', 
+              height: '150px', 
+              borderRadius: '50%',
+              margin: '0 auto 1rem',
+              overflow: 'hidden'
+            }}>
+              <img 
+                src="/JosephMiller.jpg" 
+                alt="Joseph Miller"
+                style={{ 
+                  width: '100%', 
+                  height: '100%', 
+                  objectFit: 'cover',
+                  filter: 'grayscale(100%)'
+                }} 
+              />
+            </div>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.text }}>Joseph Miller</h3>
+            <p style={{ fontSize: '1rem', color: colors.subtext }}>Director, PauseAI UK</p>
+          </div>
+
+          <div style={{ 
+            backgroundColor: colors.cardBackground, 
+            padding: '2rem', 
+            borderRadius: '0.5rem',
+            border: '2px solid ' + colors.cardBorder,
+            textAlign: 'center'
+          }}>
+            <div style={{ 
+              width: '150px', 
+              height: '150px', 
+              borderRadius: '50%',
+              margin: '0 auto 1rem',
+              overflow: 'hidden'
+            }}>
+              <img 
+                src="/EllaHughes.jpg" 
+                alt="Ella Hughes"
+                style={{ 
+                  width: '100%', 
+                  height: '100%', 
+                  objectFit: 'cover',
+                  filter: 'grayscale(100%)'
+                }} 
+              />
+            </div>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.text }}>Ella Hughes</h3>
+            <p style={{ fontSize: '1rem', color: colors.subtext }}>Organizing Director, PauseAI Global</p>
+          </div>
+
+          <div style={{ 
+            backgroundColor: colors.cardBackground, 
+            padding: '2rem', 
+            borderRadius: '0.5rem',
+            border: '2px solid ' + colors.cardBorder,
+            textAlign: 'center'
+          }}>
+            <div style={{ 
+              width: '150px', 
+              height: '150px', 
+              borderRadius: '50%',
+              margin: '0 auto 1rem',
+              overflow: 'hidden'
+            }}>
+              <img 
+                src="/TomBibby.jpg" 
+                alt="Tom Bibby"
+                style={{ 
+                  width: '100%', 
+                  height: '100%', 
+                  objectFit: 'cover',
+                  filter: 'grayscale(100%)'
+                }} 
+              />
+            </div>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.text }}>Tom Bibby</h3>
+            <p style={{ fontSize: '1rem', color: colors.subtext }}>Communications Director, PauseAI Global</p>
+          </div>
+
+          <div style={{ 
+            backgroundColor: colors.cardBackground, 
+            padding: '2rem', 
+            borderRadius: '0.5rem',
+            border: '2px solid ' + colors.cardBorder,
+            textAlign: 'center'
+          }}>
+            <div style={{ 
+              width: '150px', 
+              height: '150px', 
+              borderRadius: '50%',
+              margin: '0 auto 1rem',
+              overflow: 'hidden'
+            }}>
+              <img 
+                src="/PatricioVercesi.jpg" 
+                alt="Patricio Vercesi"
+                style={{ 
+                  width: '100%', 
+                  height: '100%', 
+                  objectFit: 'cover',
+                  filter: 'grayscale(100%)'
+                }} 
+              />
+            </div>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.text }}>Patricio Vercesi</h3>
+            <p style={{ fontSize: '1rem', color: colors.subtext }}>Online Coordinator, PauseAI Global</p>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
