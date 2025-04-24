@@ -20,7 +20,7 @@ export default function PauseConLanding() {
   const currentYear = new Date().getFullYear();
   
   const speakers = [
-    { name: 'Joep Meindertsma', title: 'founder of PauseAI', image: '/JoepMeindertsma.jpg' },
+    { name: 'Joep Meindertsma', title: 'Founder of PauseAI', image: '/JoepMeindertsma.jpg' },
     { name: 'Connor Leahy', title: 'CEO of Conjecture', image: '/ConnorLeahy.jpg' },
     { name: 'Robert Miles', title: 'YouTuber', image: '/RobertMiles.jpg' },
     { name: 'Kat Woods', title: 'Founder of Nonlinear and Charity Entrepreneurship', image: '/KatWoods.jpg' },
