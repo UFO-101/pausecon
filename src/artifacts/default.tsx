@@ -100,18 +100,24 @@ export default function PauseConLanding() {
                 target="_blank" 
                 rel="noopener noreferrer"
                 onMouseOver={(e) => {
-                  e.currentTarget.style.backgroundColor = colors.primary;
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(254, 148, 21, 0.4)';
+                  e.currentTarget.style.background = 'linear-gradient(45deg, #000000 0%, #000000 70%, #3E6990 100%)';
+                  e.currentTarget.style.backgroundClip = 'padding-box';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(62, 105, 144, 0.4)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
                 }}
                 onMouseOut={(e) => {
-                  e.currentTarget.style.backgroundColor = colors.primary;
-                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.background = 'linear-gradient(45deg, #000000 0%, #000000 70%, #3E6990 100%)';
+                  e.currentTarget.style.backgroundClip = 'padding-box';
+                  e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+                  e.currentTarget.style.transform = 'translateY(0)';
                 }}
                 style={{ 
-                  backgroundColor: colors.primary, 
+                  background: 'linear-gradient(45deg, #000000 0%, #000000 70%, #3E6990 100%)',
+                  backgroundClip: 'padding-box',
                   color: colors.white, 
                   padding: '0.5rem 1.5rem', 
-                  borderRadius: '0.5rem', 
+                  borderRadius: '0.5rem',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
                   fontWeight: 'bold',
                   textDecoration: 'none',
                   transition: 'all 0.3s ease'
@@ -202,22 +208,26 @@ export default function PauseConLanding() {
           target="_blank" 
           rel="noopener noreferrer"
           onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = colors.primary;
-            e.currentTarget.style.boxShadow = '0 0 20px rgba(254, 148, 21, 0.4)';
+            e.currentTarget.style.background = 'linear-gradient(45deg, #000000 0%, #000000 70%, #3E6990 100%)';
+            e.currentTarget.style.backgroundClip = 'padding-box';
+            e.currentTarget.style.boxShadow = '0 0 20px rgba(62, 105, 144, 0.4)';
             e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = colors.primary;
+            e.currentTarget.style.background = 'linear-gradient(45deg, #000000 0%, #000000 70%, #3E6990 100%)';
+            e.currentTarget.style.backgroundClip = 'padding-box';
             e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
           }}
           style={{ 
             display: 'inline-block',
-            backgroundColor: colors.primary, 
+            background: 'linear-gradient(45deg, #000000 0%, #000000 70%, #3E6990 100%)',
+            backgroundClip: 'padding-box',
             color: colors.white, 
             padding: isMobile ? '1rem 2rem' : '1.25rem 4rem', 
             fontSize: isMobile ? '1.25rem' : '1.5rem',
-            borderRadius: '0.5rem', 
+            borderRadius: '0.5rem',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
             fontWeight: 'bold',
             textDecoration: 'none',
             boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
@@ -442,22 +452,26 @@ export default function PauseConLanding() {
           target="_blank" 
           rel="noopener noreferrer"
           onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = colors.primary;
-            e.currentTarget.style.boxShadow = '0 0 20px rgba(254, 148, 21, 0.4)';
+            e.currentTarget.style.background = 'linear-gradient(45deg, #000000 0%, #000000 70%, #3E6990 100%)';
+            e.currentTarget.style.backgroundClip = 'padding-box';
+            e.currentTarget.style.boxShadow = '0 0 20px rgba(62, 105, 144, 0.4)';
             e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = colors.primary;
+            e.currentTarget.style.background = 'linear-gradient(45deg, #000000 0%, #000000 70%, #3E6990 100%)';
+            e.currentTarget.style.backgroundClip = 'padding-box';
             e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
           }}
           style={{ 
             display: 'inline-block',
-            backgroundColor: colors.primary, 
+            background: 'linear-gradient(45deg, #000000 0%, #000000 70%, #3E6990 100%)',
+            backgroundClip: 'padding-box',
             color: colors.white, 
             padding: isMobile ? '1rem 2rem' : '1.25rem 4rem', 
             fontSize: isMobile ? '1.25rem' : '1.5rem',
-            borderRadius: '0.5rem', 
+            borderRadius: '0.5rem',
+            border: '1px solid rgba(255, 255, 255, 0.2)', 
             fontWeight: 'bold',
             textDecoration: 'none',
             boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
