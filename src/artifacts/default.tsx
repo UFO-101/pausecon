@@ -267,14 +267,14 @@ export default function PauseConLanding() {
             </p>
           </div>
           <div style={{ 
-            backgroundColor: colors.primary, 
-            color: colors.white, 
+            backgroundColor: colors.cardBackground,
             padding: '1.5rem', 
             marginTop: '2rem',
             borderRadius: '0.5rem',
-            textAlign: 'center'
+            textAlign: 'center',
+            borderLeft: '4px solid ' + colors.primary
           }}>
-            <p style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>
+            <p style={{ fontSize: '1.25rem', fontWeight: 'bold', margin: 0, color: colors.text }}>
               We can provide accommodation in London for up to 50 attendees.
             </p>
           </div>
