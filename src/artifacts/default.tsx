@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const colors = {
   primary: 'rgb(255 144 11)', // Orange accent color
@@ -17,6 +17,8 @@ const colors = {
 export default function PauseConLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [navHeight, setNavHeight] = useState(0);
+  const navRef = useRef<HTMLDivElement>(null);
   const currentYear = new Date().getFullYear();
   
   const speakers = [
@@ -60,6 +62,20 @@ export default function PauseConLanding() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Dynamically set nav height for spacer
+  useEffect(() => {
+    if (navRef.current) {
+      setNavHeight(navRef.current.offsetHeight);
+    }
+    const handleResize = () => {
+      if (navRef.current) {
+        setNavHeight(navRef.current.offsetHeight);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMenuOpen, isMobile]);
+
   return (
     <div style={{ 
       background: 'radial-gradient(circle at top right, #3E6990 0%, #000000 60%)', 
@@ -69,7 +85,7 @@ export default function PauseConLanding() {
       fontFamily: 'Red Hat Display, sans-serif' 
     }}>
       {/* Navigation */}
-      <nav style={{ 
+      <nav ref={navRef} style={{ 
         position: 'fixed', 
         width: '100%', 
         top: 0, 
@@ -178,6 +194,27 @@ export default function PauseConLanding() {
           </div>
         )}
       </nav>
+
+      {/* Spacer for fixed navbar */}
+      <div style={{ height: navHeight }} />
+
+      {/* Accommodation Deadline Banner */}
+      <div style={{
+        backgroundColor: colors.cardBackground,
+        padding: '0.75rem 0',
+        textAlign: 'center',
+        borderBottom: `1px solid ${colors.cardBorder}`,
+      }}>
+        <p style={{ 
+          margin: 0, 
+          fontSize: '1.1rem',
+          color: colors.text
+        }}>
+          <span style={{ fontWeight: 700, fontStyle: 'italic' }}>
+            Application deadline for accommodation: end-of-day Monday 19th May
+          </span>
+        </p>
+      </div>
 
       {/* Hero Section */}
       <section id="home" style={{ paddingTop: '10rem', paddingBottom: '5rem', textAlign: 'center', padding: '10rem 1rem 5rem', background: 'rgba(0, 0, 0, 0.2)' }}>
