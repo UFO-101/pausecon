@@ -198,24 +198,6 @@ export default function PauseConLanding() {
       {/* Spacer for fixed navbar */}
       <div style={{ height: navHeight }} />
 
-      {/* Accommodation Deadline Banner */}
-      <div style={{
-        backgroundColor: colors.cardBackground,
-        padding: '0.75rem 0',
-        textAlign: 'center',
-        borderBottom: `1px solid ${colors.cardBorder}`,
-      }}>
-        <p style={{ 
-          margin: 0, 
-          fontSize: '1.1rem',
-          color: colors.text
-        }}>
-          <span style={{ fontWeight: 700, fontStyle: 'italic' }}>
-            Application deadline for accommodation: end-of-day Monday 19th May
-          </span>
-        </p>
-      </div>
-
       {/* Hero Section */}
       <section id="home" style={{ paddingTop: '10rem', paddingBottom: '5rem', textAlign: 'center', padding: '10rem 1rem 5rem', background: 'rgba(0, 0, 0, 0.2)' }}>
         <h1 style={{ fontSize: isMobile ? '3rem' : '6rem', fontWeight: '600', marginBottom: '0rem' }}>PauseCon</h1>
