@@ -28,6 +28,8 @@ export default function PauseConLanding() {
     { name: 'Kat Woods', title: 'Founder of Nonlinear and Charity Entrepreneurship', image: '/KatWoods.jpg' },
     { name: 'David Krueger', title: 'Assistant Professor at the University of Montreal', image: '/DavidKrueger.jpg' },
     { name: 'Tara Steele', title: 'Director of The Safe AI for Children Alliance', image: '/TaraSteele.jpg' },
+    { name: 'Max Winga', title: 'Creator outreach at ControlAI', image: '/MaxWinga.jpg' },
+    { name: 'Rufo Guerreschi', title: 'Director of the Coalition for a Baruch Plan for AI', image: '/RufoGuerreschi.jpg' },
   ];
 
   const team = [
@@ -310,9 +312,9 @@ export default function PauseConLanding() {
         <div style={{ 
           display: 'grid', 
           gridTemplateColumns: 
-            window.innerWidth > 1200 ? 'repeat(6, 1fr)' : 
-            window.innerWidth > 900 ? 'repeat(3, 1fr)' : 
-            window.innerWidth > 600 ? 'repeat(2, 1fr)' : 
+            window.innerWidth > 1200 ? 'repeat(4, 1fr)' :
+            window.innerWidth > 900 ? 'repeat(2, 1fr)' :
+            window.innerWidth > 600 ? 'repeat(2, 1fr)' :
             '1fr',
           gap: '1.5rem',
           maxWidth: '1600px',
