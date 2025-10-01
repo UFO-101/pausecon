@@ -21,22 +21,22 @@ export default function PauseConLanding() {
   const navRef = useRef<HTMLDivElement>(null);
   const currentYear = new Date().getFullYear();
   
-  const speakers = [
-    { name: 'Joep Meindertsma', title: 'Founder of PauseAI', image: '/JoepMeindertsma.jpg' },
-    { name: 'Connor Leahy', title: 'CEO of Conjecture', image: '/ConnorLeahy.jpg' },
-    { name: 'Robert Miles', title: 'YouTuber', image: '/RobertMiles.jpg' },
-    { name: 'Kat Woods', title: 'Founder of Nonlinear and Charity Entrepreneurship', image: '/KatWoods.jpg' },
-    { name: 'David Krueger', title: 'Assistant Professor at the University of Montreal', image: '/DavidKrueger.jpg' },
-    { name: 'Tara Steele', title: 'Director of The Safe AI for Children Alliance', image: '/TaraSteele.jpg' },
-    { name: 'Max Winga', title: 'Creator outreach at ControlAI', image: '/MaxWinga.jpg' },
-    { name: 'Rufo Guerreschi', title: 'Director of the Coalition for a Baruch Plan for AI', image: '/RufoGuerreschi.jpg' },
-  ];
+  // const speakers = [
+  //   { name: 'Joep Meindertsma', title: 'Founder of PauseAI', image: '/JoepMeindertsma.jpg' },
+  //   { name: 'Connor Leahy', title: 'CEO of Conjecture', image: '/ConnorLeahy.jpg' },
+  //   { name: 'Robert Miles', title: 'YouTuber', image: '/RobertMiles.jpg' },
+  //   { name: 'Kat Woods', title: 'Founder of Nonlinear and Charity Entrepreneurship', image: '/KatWoods.jpg' },
+  //   { name: 'David Krueger', title: 'Assistant Professor at the University of Montreal', image: '/DavidKrueger.jpg' },
+  //   { name: 'Tara Steele', title: 'Director of The Safe AI for Children Alliance', image: '/TaraSteele.jpg' },
+  //   { name: 'Rufo Guerreschi', title: 'Director of the Coalition for a Baruch Plan for AI', image: '/RufoGuerreschi.jpg' },
+  //   { name: 'Max Winga', title: 'Creator outreach at ControlAI', image: '/MaxWinga.jpg' },
+  // ];
 
   const team = [
-    { name: 'Joseph Miller', title: 'Director', org: 'PauseAI UK', image: '/JosephMiller.jpg' },
+    // { name: 'Joseph Miller', title: 'Director', org: 'PauseAI UK', image: '/JosephMiller.jpg' },
     { name: 'Ella Hughes', title: 'Organizing Director', org: 'PauseAI Global', image: '/EllaHughes.jpg' },
     { name: 'Tom Bibby', title: 'Communications Director', org: 'PauseAI Global', image: '/TomBibby.jpg' },
-    { name: 'Patricio Vercesi', title: 'Online Coordinator', org: 'PauseAI Global', image: '/PatricioVercesi.jpg' },
+    // { name: 'Patricio Vercesi', title: 'Online Coordinator', org: 'PauseAI Global', image: '/PatricioVercesi.jpg' },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -111,11 +111,11 @@ export default function PauseConLanding() {
               alignItems: 'center' 
             }}>
               <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: colors.text, textDecoration: 'none' }}>About</a>
-              <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a>
-              <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a>
+              {/* <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a> */}
+              {/* <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a> */}
               <a href="#team" onClick={(e) => scrollToSection(e, 'team')} style={{ color: colors.text, textDecoration: 'none' }}>Team</a>
               <a 
-                href="https://lu.ma/hmrkdm0u" 
+                href="https://lu.ma/wtuyu7zy" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 onMouseOver={(e) => {
@@ -178,7 +178,7 @@ export default function PauseConLanding() {
             <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a>
             <a href="#team" onClick={(e) => scrollToSection(e, 'team')} style={{ color: colors.text, textDecoration: 'none' }}>Team</a>
             <a 
-              href="https://lu.ma/hmrkdm0u" 
+              href="https://lu.ma/wtuyu7zy" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ 
@@ -203,9 +203,9 @@ export default function PauseConLanding() {
       {/* Hero Section */}
       <section id="home" style={{ paddingTop: '10rem', paddingBottom: '5rem', textAlign: 'center', padding: '10rem 1rem 5rem', background: 'rgba(0, 0, 0, 0.2)' }}>
         <h1 style={{ fontSize: isMobile ? '3rem' : '6rem', fontWeight: '600', marginBottom: '0rem' }}>PauseCon</h1>
-        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: '400', marginBottom: '2rem' }}>London 2025</h2>
+        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: '400', marginBottom: '2rem' }}>Brussels 2025</h2>
         
-        <div style={{ 
+        {/* <div style={{ 
           maxWidth: '800px', 
           margin: '0 auto 3rem', 
           aspectRatio: '16 / 9', 
@@ -222,12 +222,12 @@ export default function PauseConLanding() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
-        </div>
+        </div> */}
         
-        <p style={{ fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: 'bold', marginBottom: '3rem' }}>27-30th June 2025</p>
+        <p style={{ fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: 'bold', marginBottom: '3rem' }}>11-13th December 2025</p>
         
         <a 
-          href="https://lu.ma/hmrkdm0u" 
+          href="https://lu.ma/wtuyu7zy" 
           target="_blank" 
           rel="noopener noreferrer"
           onMouseOver={(e) => {
@@ -274,19 +274,18 @@ export default function PauseConLanding() {
             borderLeft: '4px solid ' + colors.primary
           }}>
             <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
-              PauseCon is a development and training event for anyone interested in volunteering for PauseAI, 
-              ending with our largest protest to date.
+              PauseCon is a development and training event for anyone interested in volunteering for PauseAI.
             </p>
             <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
-              Attendees at PauseCon London will receive training in community building, social media strategy 
-              and digital organizing. Connor Leahy, Founder of Conjecture, will give a talk on AI governance 
-              and there will be a panel of 5 leaders in AI governance, discussing public communication of AI risks.
+              Attendees at PauseCon Brussels will receive training in community building, social media strategy 
+              and digital organizing.
             </p>
             <p style={{ lineHeight: '1.6' }}>
-              We will use the opportunity of having so many of us together in one place to do flyering and 
-              recruitment for the London chapter, and also to hold our biggest ever protest. This should be 
-              an excellent opportunity to build our numbers, and attract the attention of the public, the 
-              media and British politicians.
+              We will use the opportunity of having so many of us together in one place to do
+              flyering and recruitment in Brussels and lobby members of European Parliament, and
+              also to hold our biggest ever protest. This should be an excellent opportunity to
+              build our numbers, and attract the attention of the public, the media and European
+              politicians.
             </p>
           </div>
           <div style={{ 
@@ -298,14 +297,14 @@ export default function PauseConLanding() {
             borderLeft: '4px solid ' + colors.primary
           }}>
             <p style={{ fontSize: '1.25rem', fontWeight: 'bold', margin: 0, color: colors.text }}>
-              We can provide accommodation in London for up to 50 attendees.
+              We can provide accommodation in Brussels for up to 50 attendees.
             </p>
           </div>
         </div>
       </section>
 
       {/* Speakers Section */}
-      <section id="speakers" style={{ padding: '5rem 2rem', background: 'rgba(0, 0, 0, 0.4)' }}>
+      {/* <section id="speakers" style={{ padding: '5rem 2rem', background: 'rgba(0, 0, 0, 0.4)' }}>
         <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: colors.text }}>
           Featured Speakers
         </h2>
@@ -375,10 +374,10 @@ export default function PauseConLanding() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Schedule Section */}
-      <section id="schedule" style={{ padding: '5rem 2rem', background: 'rgba(15, 15, 15, 0.3)' }}>
+      {/* <section id="schedule" style={{ padding: '5rem 2rem', background: 'rgba(15, 15, 15, 0.3)' }}>
         <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: colors.text }}>
           What to Expect
         </h2>
@@ -462,16 +461,16 @@ export default function PauseConLanding() {
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section style={{ padding: '5rem 2rem', textAlign: 'center', background: 'rgba(0, 0, 0, 0.2)' }}>
-        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '2rem', color: colors.text }}>Join Us in London</h2>
+        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '2rem', color: colors.text }}>Join Us in Brussels</h2>
         <p style={{ fontSize: '1.25rem', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem', color: colors.text }}>
           Be part of the movement to ensure AI development is safe. 
         </p>
         <a 
-          href="https://lu.ma/hmrkdm0u" 
+          href="https://lu.ma/wtuyu7zy" 
           target="_blank" 
           rel="noopener noreferrer"
           onMouseOver={(e) => {
@@ -513,7 +512,7 @@ export default function PauseConLanding() {
         <div style={{ 
           display: 'grid', 
           gridTemplateColumns: 
-            window.innerWidth > 1200 ? 'repeat(4, 1fr)' : 
+            window.innerWidth > 1200 ? 'repeat(2, 1fr)' : 
             window.innerWidth > 900 ? 'repeat(2, 1fr)' : 
             '1fr',
           gap: '2rem',
