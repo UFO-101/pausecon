@@ -105,14 +105,14 @@ export default function PauseConLanding() {
           
           {/* Desktop Menu */}
           {!isMobile && (
-            <div style={{ 
-              display: 'flex', 
-              gap: '2rem', 
-              alignItems: 'center' 
+            <div style={{
+              display: 'flex',
+              gap: '2rem',
+              alignItems: 'center'
             }}>
               <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: colors.text, textDecoration: 'none' }}>About</a>
               {/* <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a> */}
-              {/* <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a> */}
+              <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a>
               <a href="#team" onClick={(e) => scrollToSection(e, 'team')} style={{ color: colors.text, textDecoration: 'none' }}>Team</a>
               <a 
                 href="https://lu.ma/wtuyu7zy" 
@@ -166,7 +166,7 @@ export default function PauseConLanding() {
         
         {/* Mobile Menu */}
         {isMenuOpen && isMobile && (
-          <div style={{ 
+          <div style={{
             backgroundColor: colors.background,
             padding: '1rem',
             display: 'flex',
@@ -174,7 +174,7 @@ export default function PauseConLanding() {
             gap: '1rem'
           }}>
             <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: colors.text, textDecoration: 'none' }}>About</a>
-            <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a>
+            {/* <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a> */}
             <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a>
             <a href="#team" onClick={(e) => scrollToSection(e, 'team')} style={{ color: colors.text, textDecoration: 'none' }}>Team</a>
             <a 
@@ -263,41 +263,122 @@ export default function PauseConLanding() {
 
       {/* About Section */}
       <section id="about" style={{ padding: '5rem 2rem', background: 'rgba(26, 26, 26, 0.3)' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '2rem', textAlign: 'center' }}>
-            About PauseCon
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: isMobile ? '2.5rem' : '3.5rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center' }}>
+            From Risk to Responsibility: Join the Strategic Summit for a Global AI Pause
           </h2>
-          <div style={{ 
-            backgroundColor: colors.cardBackground, 
-            padding: '2rem', 
+          <h3 style={{ fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: '600', marginBottom: '3rem', textAlign: 'center', color: colors.primary }}>
+            A 3-Day Summit to Build Strategy and Drive Political Action at the Heart of the EU
+          </h3>
+
+          <div style={{
+            backgroundColor: colors.cardBackground,
+            padding: '2rem',
+            borderRadius: '1rem',
+            marginBottom: '2rem',
+            borderLeft: '4px solid ' + colors.primary
+          }}>
+            <p style={{ marginBottom: '1.5rem', lineHeight: '1.8', fontSize: '1.1rem' }}>
+              The uncontrolled race for superintelligence continues, posing a significant risk of human extinction. But the political window to act is opening. This December, we are bringing our demand for a global, verifiable moratorium to the place where European law is made: Brussels.
+            </p>
+            <p style={{ marginBottom: '1.5rem', lineHeight: '1.8', fontSize: '1.1rem' }}>
+              PauseCon 2 is <strong>not a typical conference</strong>. It is a <strong>high-impact, 3-day strategic summit</strong> designed to move the needle and position the European Union as a global initiator for an AI Pause.
+            </p>
+            <p style={{ lineHeight: '1.8', fontSize: '1.1rem' }}>
+              This event is not just about training, it's about <strong>real-world impact</strong>. If you are ready to move beyond discussion and contribute to tangible political change, this is your event.
+            </p>
+          </div>
+
+          <h3 style={{ fontSize: isMobile ? '1.75rem' : '2.25rem', fontWeight: 'bold', marginBottom: '2rem', textAlign: 'center' }}>
+            What to Expect at PauseCon Brussels:
+          </h3>
+
+          <div style={{
+            display: 'grid',
+            gap: '1.5rem',
+            marginBottom: '3rem'
+          }}>
+            <div style={{
+              backgroundColor: colors.cardBackground,
+              padding: '1.75rem',
+              borderRadius: '0.75rem',
+              borderLeft: '4px solid ' + colors.primary
+            }}>
+              <h4 style={{ fontSize: '1.4rem', fontWeight: 'bold', marginBottom: '1rem', color: colors.primary }}>
+                Exclusive Access & Direct Lobbying
+              </h4>
+              <p style={{ lineHeight: '1.7' }}>
+                The summit's centerpiece is a <strong>public conference held inside the European Parliament</strong>. This is a unique platform to present our policy proposals and engage directly with EU policymakers, their staff, and the Brussels political community.
+              </p>
+            </div>
+
+            <div style={{
+              backgroundColor: colors.cardBackground,
+              padding: '1.75rem',
+              borderRadius: '0.75rem',
+              borderLeft: '4px solid ' + colors.primary
+            }}>
+              <h4 style={{ fontSize: '1.4rem', fontWeight: 'bold', marginBottom: '1rem', color: colors.primary }}>
+                Strategic "Roll-Up-Your-Sleeves" Workshops
+              </h4>
+              <p style={{ lineHeight: '1.7' }}>
+                This is a participatory event. You won't just be briefed; you will <strong>co-create the strategy</strong>. We will draft the AI Moratorium Charter, finalise the policy documents for MEPs, and plan our public actions.
+              </p>
+            </div>
+
+            <div style={{
+              backgroundColor: colors.cardBackground,
+              padding: '1.75rem',
+              borderRadius: '0.75rem',
+              borderLeft: '4px solid ' + colors.primary
+            }}>
+              <h4 style={{ fontSize: '1.4rem', fontWeight: 'bold', marginBottom: '1rem', color: colors.primary }}>
+                High-Visibility Public Action
+              </h4>
+              <p style={{ lineHeight: '1.7' }}>
+                We will hold a <strong>major, coordinated demonstration at the Place du Luxembourg</strong>, directly in front of the Parliament. Our goal is to gain maximum media and political attention, demonstrating the strong public demand for the prevention of uncontrollable AI.
+              </p>
+            </div>
+
+            <div style={{
+              backgroundColor: colors.cardBackground,
+              padding: '1.75rem',
+              borderRadius: '0.75rem',
+              borderLeft: '4px solid ' + colors.primary
+            }}>
+              <h4 style={{ fontSize: '1.4rem', fontWeight: 'bold', marginBottom: '1rem', color: colors.primary }}>
+                Community & Networking
+              </h4>
+              <p style={{ lineHeight: '1.7' }}>
+                Connect with the dedicated experts, activists, and organisers who form the core of the PauseAI movement. Forge the alliances we need for the long-term international campaign.
+              </p>
+            </div>
+          </div>
+
+          <div style={{
+            backgroundColor: colors.cardBackground,
+            padding: '2rem',
+            marginBottom: '2rem',
+            borderRadius: '0.75rem',
+            textAlign: 'center',
+            border: '2px solid ' + colors.primary
+          }}>
+            <p style={{ fontSize: '1.3rem', fontWeight: 'bold', marginBottom: '1rem', color: colors.text }}>
+              We know that your commitment and time are valuable.
+            </p>
+            <p style={{ fontSize: '1.2rem', margin: 0, color: colors.text }}>
+              Participation in PauseCon Brussels is <strong style={{ color: colors.primary }}>free of charge</strong>. We provide <strong style={{ color: colors.primary }}>accommodation at Centerstay Brussels</strong> (in close proximity to the venue) and cover part of the catering costs during the event.
+            </p>
+          </div>
+
+          <div style={{
+            backgroundColor: colors.cardBackground,
+            padding: '2rem',
             borderRadius: '1rem',
             borderLeft: '4px solid ' + colors.primary
           }}>
-            <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
-              PauseCon is a development and training event for anyone interested in volunteering for PauseAI.
-            </p>
-            <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
-              Attendees at PauseCon Brussels will receive training in community building, social media strategy 
-              and digital organizing.
-            </p>
-            <p style={{ lineHeight: '1.6' }}>
-              We will use the opportunity of having so many of us together in one place to do
-              flyering and recruitment in Brussels and lobby members of European Parliament, and
-              also to hold our biggest ever protest. This should be an excellent opportunity to
-              build our numbers, and attract the attention of the public, the media and European
-              politicians.
-            </p>
-          </div>
-          <div style={{ 
-            backgroundColor: colors.cardBackground,
-            padding: '1.5rem', 
-            marginTop: '2rem',
-            borderRadius: '0.5rem',
-            textAlign: 'center',
-            borderLeft: '4px solid ' + colors.primary
-          }}>
-            <p style={{ fontSize: '1.25rem', fontWeight: 'bold', margin: 0, color: colors.text }}>
-              We can provide accommodation in Brussels for up to 50 attendees.
+            <p style={{ fontSize: '1.15rem', lineHeight: '1.7', textAlign: 'center', fontStyle: 'italic' }}>
+              We are removing the barriers so that we can focus on what matters most: achieving maximum impact.
             </p>
           </div>
         </div>
@@ -377,91 +458,210 @@ export default function PauseConLanding() {
       </section> */}
 
       {/* Schedule Section */}
-      {/* <section id="schedule" style={{ padding: '5rem 2rem', background: 'rgba(15, 15, 15, 0.3)' }}>
-        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: colors.text }}>
-          What to Expect
-        </h2>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
-          gap: '2rem',
-          maxWidth: '900px',
-          margin: '0 auto'
-        }}>
-          <div style={{ 
-            backgroundColor: colors.cardBackground, 
-            padding: '2rem', 
-            borderRadius: '0.5rem',
-            borderTop: '4px solid ' + colors.primary
-          }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: colors.text }}>Training Sessions</h3>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li style={{ 
-                backgroundColor: colors.cardDark, 
-                padding: '1rem', 
-                marginBottom: '1rem',
-                borderRadius: '0.25rem',
-                border: '1px solid ' + colors.cardBorder
-              }}>
-                Community Building Workshops
-              </li>
-              <li style={{ 
-                backgroundColor: colors.cardDark, 
-                padding: '1rem', 
-                marginBottom: '1rem',
-                borderRadius: '0.25rem',
-                border: '1px solid ' + colors.cardBorder
-              }}>
-                Social Media Strategy
-              </li>
-              <li style={{ 
-                backgroundColor: colors.cardDark, 
-                padding: '1rem', 
-                borderRadius: '0.25rem',
-                border: '1px solid ' + colors.cardBorder
-              }}>
-                Digital Organizing Techniques
-              </li>
-            </ul>
+      <section id="schedule" style={{ padding: '5rem 2rem', background: 'rgba(15, 15, 15, 0.3)' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '1.5rem', textAlign: 'center', color: colors.text }}>
+            Our Schedule is Built to Maximise Impact
+          </h2>
+          <p style={{ fontSize: '1.1rem', textAlign: 'center', marginBottom: '3rem', color: colors.subtext, maxWidth: '800px', margin: '0 auto 3rem' }}>
+            Three intensive days of strategy, policymaking, and public action at the heart of European power.
+          </p>
+
+          {/* Day 1 */}
+          <div style={{ marginBottom: '3rem' }}>
+            <div style={{
+              backgroundColor: '#1a4d7a',
+              padding: '1.5rem',
+              borderRadius: '0.75rem 0.75rem 0 0',
+              borderBottom: '4px solid ' + colors.primary
+            }}>
+              <h3 style={{ fontSize: '1.75rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.white }}>
+                Day 1 — Thursday 11 December 2025
+              </h3>
+              <p style={{ fontSize: '1.2rem', margin: 0, color: colors.text, fontStyle: 'italic' }}>
+                Foundations & Strategy
+              </p>
+              <p style={{ fontSize: '1rem', margin: '0.5rem 0 0 0', color: colors.subtext }}>
+                09:00 – 18:00
+              </p>
+            </div>
+            <div style={{
+              backgroundColor: colors.cardBackground,
+              padding: '2rem',
+              borderRadius: '0 0 0.75rem 0.75rem'
+            }}>
+              <p style={{ marginBottom: '2rem', lineHeight: '1.7' }}>
+                We begin by coordinating and deepening our strategy. In interactive workshops, we will define our "red lines" for a moratorium, map the EU political landscape (including the crucial French-speaking world), and explore robust global governance frameworks.
+              </p>
+              <div style={{ display: 'grid', gap: '1rem' }}>
+                {[
+                  { time: '09:00 – 10:00', title: 'Registration & Welcome coffee', desc: 'Informal networking. Overview of the program. Short intro by Joseph Miller and Didier Coeurnelle.' },
+                  { time: '10:00 – 11:00', title: 'Opening plenary: Why Pause?', desc: 'Context of the Pause AI movement, recap of recent developments (Yudkowsky, Bengio, Hinton).' },
+                  { time: '11:00 – 12:30', title: 'Workshop 1 – Defining the Red Lines', desc: 'Interactive session on what should be paused, for how long, under which conditions.' },
+                  { time: '12:30 – 14:00', title: 'Lunch break', desc: 'Muntpunt café or nearby restaurants.' },
+                  { time: '14:00 – 15:30', title: 'Workshop 2A – Mapping Allies & Stakeholders', desc: 'Identify NGOs, MEPs, researchers, and institutions aligned with AI safety.' },
+                  { time: '14:00 – 15:30', title: 'Workshop 2B – Specificities of the French speaking world (en français)', desc: 'Led by Maxime Fournes. Traditional French opposition to technology.' },
+                  { time: '16:00 – 17:30', title: 'Workshop 3A – AI for Health & Longevity: hopes and risks', desc: 'Led by Didier Coeurnelle. Exploring "good AI" for humanity\'s long-term well-being.' },
+                  { time: '16:00 – 17:30', title: 'Workshop 3B – Gaiga Now', desc: 'Led by Robert Withfield. Exploring international governance.' },
+                  { time: '18:30 →', title: 'Informal dinner / Socializing', desc: 'Optional dinner nearby (e.g., Halles Saint-Géry).' }
+                ].map((item, idx) => (
+                  <div key={idx} style={{
+                    backgroundColor: colors.cardDark,
+                    padding: '1.25rem',
+                    borderRadius: '0.5rem',
+                    borderLeft: '3px solid ' + colors.primary
+                  }}>
+                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? '0.5rem' : '1rem' }}>
+                      <div style={{ minWidth: isMobile ? 'auto' : '150px', fontWeight: 'bold', color: colors.primary }}>
+                        {item.time}
+                      </div>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>{item.title}</div>
+                        <div style={{ fontSize: '0.95rem', color: colors.subtext }}>{item.desc}</div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-          <div style={{ 
-            backgroundColor: colors.cardBackground, 
-            padding: '2rem', 
-            borderRadius: '0.5rem',
-            borderTop: '4px solid ' + colors.primary
+
+          {/* Day 2 */}
+          <div style={{ marginBottom: '3rem' }}>
+            <div style={{
+              backgroundColor: '#2a5c3a',
+              padding: '1.5rem',
+              borderRadius: '0.75rem 0.75rem 0 0',
+              borderBottom: '4px solid ' + colors.primary
+            }}>
+              <h3 style={{ fontSize: '1.75rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.white }}>
+                Day 2 — Friday 12 December 2025
+              </h3>
+              <p style={{ fontSize: '1.2rem', margin: 0, color: colors.text, fontStyle: 'italic' }}>
+                Policymaking & Mobilization
+              </p>
+              <p style={{ fontSize: '1rem', margin: '0.5rem 0 0 0', color: colors.subtext }}>
+                09:00 – 18:00 + evening conference
+              </p>
+            </div>
+            <div style={{
+              backgroundColor: colors.cardBackground,
+              padding: '2rem',
+              borderRadius: '0 0 0.75rem 0.75rem'
+            }}>
+              <p style={{ marginBottom: '2rem', lineHeight: '1.7' }}>
+                We get concrete. This day is dedicated to drafting the AI Moratorium Charter and finalising our Policy Brief for delivery. The day culminates in our public conference at the European Parliament, where we take our case directly to the legislators.
+              </p>
+              <div style={{ display: 'grid', gap: '1rem' }}>
+                {[
+                  { time: '09:00 – 09:30', title: 'Morning coffee & recap', desc: 'Recap from Day 1, announcements.' },
+                  { time: '09:30 – 11:00', title: 'Workshop 4 – Drafting the AI Moratorium Charta', desc: 'Define key clauses: what exactly to pause, duration, monitoring, oversight.' },
+                  { time: '11:00 – 12:30', title: 'Workshop 5 – Preparing policy proposals for MEPs', desc: 'Draft policy brief & resolution proposal to present in Parliament.' },
+                  { time: '12:30 – 14:00', title: 'Lunch break', desc: 'For a small group: going contact people in the International Summit of AI.' },
+                  { time: '14:00 – 15:30', title: 'Workshop 6A – Communication strategy & media visibility', desc: 'Plan quotes wall, banners, slogans, journalists\' outreach.' },
+                  { time: '14:00 – 15:30', title: 'Workshop 6B – Psychology - Sociology', desc: 'Why are leaders and stakeholders not terrorised? Why do "normal" people have more logical reactions?' },
+                  { time: '16:00 – 17:30', title: 'Workshop 7 – "If Anyone Builds It, Everyone Dies" actions', desc: 'Decide on reading, book distribution, symbolic acts, QR code materials.' },
+                  { time: '17:30 – 18:00', title: 'Summary of the day', desc: 'Define practical tasks for the demonstration.' },
+                  { time: '19:30 – 22:00', title: 'Public Conference – European Parliament', desc: 'With MEP Saskia Bricmont (tbc), collaborator of MEP Sergey Lagodinsky, MEP Brando Benifei (tbc), and Stuart Russell (tbc). Topic: "Can the EU Initiate a Global AI Pause?"' }
+                ].map((item, idx) => (
+                  <div key={idx} style={{
+                    backgroundColor: colors.cardDark,
+                    padding: '1.25rem',
+                    borderRadius: '0.5rem',
+                    borderLeft: '3px solid ' + colors.primary
+                  }}>
+                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? '0.5rem' : '1rem' }}>
+                      <div style={{ minWidth: isMobile ? 'auto' : '150px', fontWeight: 'bold', color: colors.primary }}>
+                        {item.time}
+                      </div>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>{item.title}</div>
+                        <div style={{ fontSize: '0.95rem', color: colors.subtext }}>{item.desc}</div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Day 3 */}
+          <div style={{ marginBottom: '3rem' }}>
+            <div style={{
+              backgroundColor: '#7a2a2a',
+              padding: '1.5rem',
+              borderRadius: '0.75rem 0.75rem 0 0',
+              borderBottom: '4px solid ' + colors.primary
+            }}>
+              <h3 style={{ fontSize: '1.75rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.white }}>
+                Day 3 — Saturday 13 December 2025
+              </h3>
+              <p style={{ fontSize: '1.2rem', margin: 0, color: colors.text, fontStyle: 'italic' }}>
+                Public Action & Visibility
+              </p>
+              <p style={{ fontSize: '1rem', margin: '0.5rem 0 0 0', color: colors.subtext }}>
+                09:00 – 17:30
+              </p>
+            </div>
+            <div style={{
+              backgroundColor: colors.cardBackground,
+              padding: '2rem',
+              borderRadius: '0 0 0.75rem 0.75rem'
+            }}>
+              <p style={{ marginBottom: '2rem', lineHeight: '1.7' }}>
+                We take our message to the public. After final preparations, we will hold our major demonstration at Place du Luxembourg, followed by targeted outreach and a campaign to distribute copies of the book "If Anyone Builds It, Everyone Dies" in the heart of Brussels.
+              </p>
+              <div style={{ display: 'grid', gap: '1rem' }}>
+                {[
+                  { time: '09:00 – 10:30', title: 'Final preparation for the demonstration', desc: 'Logistics, banners, coordination, legal checks, group division.' },
+                  { time: '10:30 – 11:00', title: 'Transport & setup', desc: 'Move to Place du Luxembourg.' },
+                  { time: '11:00 – 13:00', title: 'Demonstration at Place du Luxembourg ("Place Lux")', desc: 'Symbolic event in front of the European Parliament. Slogans, quote wall, banner signing, possible media presence.' },
+                  { time: '13:00 – 14:00', title: 'Lunch nearby (Ixelles / EU Quarter)', desc: '' },
+                  { time: '14:00 – 15:30', title: 'Book distribution campaign', desc: 'Distribute If Anyone Builds It, Everyone Dies copies in key Brussels areas (Grand-Place, Bourse, Gare Centrale etc.).' },
+                  { time: '15:30 – 16:00', title: 'Coffee break', desc: '' },
+                  { time: '16:00 – 17:30', title: 'Debriefing & next steps (Muntpunt Library)', desc: 'Evaluation, next meetings, continuation of working groups.' },
+                  { time: '18:00', title: 'Informal farewell gathering', desc: 'Optional drinks or dinner to close PauseCon2.' }
+                ].map((item, idx) => (
+                  <div key={idx} style={{
+                    backgroundColor: colors.cardDark,
+                    padding: '1.25rem',
+                    borderRadius: '0.5rem',
+                    borderLeft: '3px solid ' + colors.primary
+                  }}>
+                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? '0.5rem' : '1rem' }}>
+                      <div style={{ minWidth: isMobile ? 'auto' : '150px', fontWeight: 'bold', color: colors.primary }}>
+                        {item.time}
+                      </div>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>{item.title}</div>
+                        {item.desc && <div style={{ fontSize: '0.95rem', color: colors.subtext }}>{item.desc}</div>}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div style={{
+            backgroundColor: colors.cardBackground,
+            padding: '2rem',
+            borderRadius: '0.75rem',
+            textAlign: 'center',
+            border: '2px solid ' + colors.primary
           }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: colors.text }}>Key Events</h3>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li style={{ 
-                backgroundColor: colors.cardDark, 
-                padding: '1rem', 
-                marginBottom: '1rem',
-                borderRadius: '0.25rem',
-                border: '1px solid ' + colors.cardBorder
-              }}>
-                AI Governance Talk by Connor Leahy
-              </li>
-              <li style={{ 
-                backgroundColor: colors.cardDark, 
-                padding: '1rem', 
-                marginBottom: '1rem',
-                borderRadius: '0.25rem',
-                border: '1px solid ' + colors.cardBorder
-              }}>
-                Panel: Public Communication of AI Risks
-              </li>
-              <li style={{ 
-                backgroundColor: colors.cardDark, 
-                padding: '1rem', 
-                borderRadius: '0.25rem',
-                border: '1px solid ' + colors.cardBorder
-              }}>
-                Largest PauseAI Protest to Date
-              </li>
-            </ul>
+            <p style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '1rem' }}>
+              Venue: Muntpunt Library, Pl. de la Monnaie 6, 1000 Brussels
+            </p>
+            <p style={{ fontSize: '1.1rem', color: colors.subtext, marginBottom: '1rem' }}>
+              Accommodation: Centerstay Brussels, Rue des Fripiers 17
+            </p>
+            <p style={{ fontSize: '1.1rem', color: colors.subtext }}>
+              Demonstration: Place du Luxembourg
+            </p>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* CTA Section */}
       <section style={{ padding: '5rem 2rem', textAlign: 'center', background: 'rgba(0, 0, 0, 0.2)' }}>
