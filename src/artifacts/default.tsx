@@ -112,7 +112,7 @@ export default function PauseConLanding() {
             }}>
               <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: colors.text, textDecoration: 'none' }}>About</a>
               {/* <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a> */}
-              <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a>
+              {/* <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a> */}
               <a href="#team" onClick={(e) => scrollToSection(e, 'team')} style={{ color: colors.text, textDecoration: 'none' }}>Team</a>
               <a 
                 href="https://lu.ma/wtuyu7zy" 
@@ -175,7 +175,7 @@ export default function PauseConLanding() {
           }}>
             <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: colors.text, textDecoration: 'none' }}>About</a>
             {/* <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a> */}
-            <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a>
+            {/* <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a> */}
             <a href="#team" onClick={(e) => scrollToSection(e, 'team')} style={{ color: colors.text, textDecoration: 'none' }}>Team</a>
             <a 
               href="https://lu.ma/wtuyu7zy" 
@@ -458,7 +458,7 @@ export default function PauseConLanding() {
       </section> */}
 
       {/* Schedule Section */}
-      <section id="schedule" style={{ padding: '5rem 2rem', background: 'rgba(15, 15, 15, 0.3)' }}>
+      {/* <section id="schedule" style={{ padding: '5rem 2rem', background: 'rgba(15, 15, 15, 0.3)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '1.5rem', textAlign: 'center', color: colors.text }}>
             Our Schedule is Built to Maximise Impact
@@ -466,202 +466,8 @@ export default function PauseConLanding() {
           <p style={{ fontSize: '1.1rem', textAlign: 'center', marginBottom: '3rem', color: colors.subtext, maxWidth: '800px', margin: '0 auto 3rem' }}>
             Three intensive days of strategy, policymaking, and public action at the heart of European power.
           </p>
-
-          {/* Day 1 */}
-          <div style={{ marginBottom: '3rem' }}>
-            <div style={{
-              backgroundColor: '#1a4d7a',
-              padding: '1.5rem',
-              borderRadius: '0.75rem 0.75rem 0 0',
-              borderBottom: '4px solid ' + colors.primary
-            }}>
-              <h3 style={{ fontSize: '1.75rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.white }}>
-                Day 1 — Saturday 21 February 2026
-              </h3>
-              <p style={{ fontSize: '1.2rem', margin: 0, color: colors.text, fontStyle: 'italic' }}>
-                Foundations & Strategy
-              </p>
-              <p style={{ fontSize: '1rem', margin: '0.5rem 0 0 0', color: colors.subtext }}>
-                09:00 – 18:00
-              </p>
-            </div>
-            <div style={{
-              backgroundColor: colors.cardBackground,
-              padding: '2rem',
-              borderRadius: '0 0 0.75rem 0.75rem'
-            }}>
-              <p style={{ marginBottom: '2rem', lineHeight: '1.7' }}>
-                We begin by coordinating and deepening our strategy. In interactive workshops, we will define our "red lines" for a moratorium, map the EU political landscape (including the crucial French-speaking world), and explore robust global governance frameworks.
-              </p>
-              <div style={{ display: 'grid', gap: '1rem' }}>
-                {[
-                  { time: '09:00 – 10:00', title: 'Registration & Welcome coffee', desc: 'Informal networking. Overview of the program. Short intro by Joseph Miller and Didier Coeurnelle.' },
-                  { time: '10:00 – 11:00', title: 'Opening plenary: Why Pause?', desc: 'Context of the Pause AI movement, recap of recent developments (Yudkowsky, Bengio, Hinton).' },
-                  { time: '11:00 – 12:30', title: 'Workshop 1 – Defining the Red Lines', desc: 'Interactive session on what should be paused, for how long, under which conditions.' },
-                  { time: '12:30 – 14:00', title: 'Lunch break', desc: 'Muntpunt café or nearby restaurants.' },
-                  { time: '14:00 – 15:30', title: 'Workshop 2A – Mapping Allies & Stakeholders', desc: 'Identify NGOs, MEPs, researchers, and institutions aligned with AI safety.' },
-                  { time: '14:00 – 15:30', title: 'Workshop 2B – Specificities of the French speaking world (en français)', desc: 'Led by Maxime Fournes. Traditional French opposition to technology.' },
-                  { time: '16:00 – 17:30', title: 'Workshop 3A – AI for Health & Longevity: hopes and risks', desc: 'Led by Didier Coeurnelle. Exploring "good AI" for humanity\'s long-term well-being.' },
-                  { time: '16:00 – 17:30', title: 'Workshop 3B – Gaiga Now', desc: 'Led by Robert Withfield. Exploring international governance.' },
-                  { time: '18:30 →', title: 'Informal dinner / Socializing', desc: 'Optional dinner nearby (e.g., Halles Saint-Géry).' }
-                ].map((item, idx) => (
-                  <div key={idx} style={{
-                    backgroundColor: colors.cardDark,
-                    padding: '1.25rem',
-                    borderRadius: '0.5rem',
-                    borderLeft: '3px solid ' + colors.primary
-                  }}>
-                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? '0.5rem' : '1rem' }}>
-                      <div style={{ minWidth: isMobile ? 'auto' : '150px', fontWeight: 'bold', color: colors.primary }}>
-                        {item.time}
-                      </div>
-                      <div style={{ flex: 1 }}>
-                        <div style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>{item.title}</div>
-                        <div style={{ fontSize: '0.95rem', color: colors.subtext }}>{item.desc}</div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Day 2 */}
-          <div style={{ marginBottom: '3rem' }}>
-            <div style={{
-              backgroundColor: '#2a5c3a',
-              padding: '1.5rem',
-              borderRadius: '0.75rem 0.75rem 0 0',
-              borderBottom: '4px solid ' + colors.primary
-            }}>
-              <h3 style={{ fontSize: '1.75rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.white }}>
-                Day 2 — Sunday 22 February 2026
-              </h3>
-              <p style={{ fontSize: '1.2rem', margin: 0, color: colors.text, fontStyle: 'italic' }}>
-                Policymaking & Mobilization
-              </p>
-              <p style={{ fontSize: '1rem', margin: '0.5rem 0 0 0', color: colors.subtext }}>
-                09:00 – 18:00 + evening conference
-              </p>
-            </div>
-            <div style={{
-              backgroundColor: colors.cardBackground,
-              padding: '2rem',
-              borderRadius: '0 0 0.75rem 0.75rem'
-            }}>
-              <p style={{ marginBottom: '2rem', lineHeight: '1.7' }}>
-                We get concrete. This day is dedicated to drafting the AI Moratorium Charter and finalising our Policy Brief for delivery. The day culminates in our public conference at the European Parliament, where we take our case directly to the legislators.
-              </p>
-              <div style={{ display: 'grid', gap: '1rem' }}>
-                {[
-                  { time: '09:00 – 09:30', title: 'Morning coffee & recap', desc: 'Recap from Day 1, announcements.' },
-                  { time: '09:30 – 11:00', title: 'Workshop 4 – Drafting the AI Moratorium Charta', desc: 'Define key clauses: what exactly to pause, duration, monitoring, oversight.' },
-                  { time: '11:00 – 12:30', title: 'Workshop 5 – Preparing policy proposals for MEPs', desc: 'Draft policy brief & resolution proposal to present in Parliament.' },
-                  { time: '12:30 – 14:00', title: 'Lunch break', desc: 'For a small group: going contact people in the International Summit of AI.' },
-                  { time: '14:00 – 15:30', title: 'Workshop 6A – Communication strategy & media visibility', desc: 'Plan quotes wall, banners, slogans, journalists\' outreach.' },
-                  { time: '14:00 – 15:30', title: 'Workshop 6B – Psychology - Sociology', desc: 'Why are leaders and stakeholders not terrorised? Why do "normal" people have more logical reactions?' },
-                  { time: '16:00 – 17:30', title: 'Workshop 7 – "If Anyone Builds It, Everyone Dies" actions', desc: 'Decide on reading, book distribution, symbolic acts, QR code materials.' },
-                  { time: '17:30 – 18:00', title: 'Summary of the day', desc: 'Define practical tasks for the demonstration.' },
-                  { time: '19:30 – 22:00', title: 'Public Conference – European Parliament', desc: 'With MEP Saskia Bricmont (tbc), collaborator of MEP Sergey Lagodinsky, MEP Brando Benifei (tbc), and Stuart Russell (tbc). Topic: "Can the EU Initiate a Global AI Pause?"' }
-                ].map((item, idx) => (
-                  <div key={idx} style={{
-                    backgroundColor: colors.cardDark,
-                    padding: '1.25rem',
-                    borderRadius: '0.5rem',
-                    borderLeft: '3px solid ' + colors.primary
-                  }}>
-                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? '0.5rem' : '1rem' }}>
-                      <div style={{ minWidth: isMobile ? 'auto' : '150px', fontWeight: 'bold', color: colors.primary }}>
-                        {item.time}
-                      </div>
-                      <div style={{ flex: 1 }}>
-                        <div style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>{item.title}</div>
-                        <div style={{ fontSize: '0.95rem', color: colors.subtext }}>{item.desc}</div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Day 3 */}
-          <div style={{ marginBottom: '3rem' }}>
-            <div style={{
-              backgroundColor: '#7a2a2a',
-              padding: '1.5rem',
-              borderRadius: '0.75rem 0.75rem 0 0',
-              borderBottom: '4px solid ' + colors.primary
-            }}>
-              <h3 style={{ fontSize: '1.75rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.white }}>
-                Day 3 — Monday 23 February 2026
-              </h3>
-              <p style={{ fontSize: '1.2rem', margin: 0, color: colors.text, fontStyle: 'italic' }}>
-                Public Action & Visibility
-              </p>
-              <p style={{ fontSize: '1rem', margin: '0.5rem 0 0 0', color: colors.subtext }}>
-                09:00 – 17:30
-              </p>
-            </div>
-            <div style={{
-              backgroundColor: colors.cardBackground,
-              padding: '2rem',
-              borderRadius: '0 0 0.75rem 0.75rem'
-            }}>
-              <p style={{ marginBottom: '2rem', lineHeight: '1.7' }}>
-                We take our message to the public. After final preparations, we will hold our major demonstration at Place du Luxembourg, followed by targeted outreach and a campaign to distribute copies of the book "If Anyone Builds It, Everyone Dies" in the heart of Brussels.
-              </p>
-              <div style={{ display: 'grid', gap: '1rem' }}>
-                {[
-                  { time: '09:00 – 10:30', title: 'Final preparation for the demonstration', desc: 'Logistics, banners, coordination, legal checks, group division.' },
-                  { time: '10:30 – 11:00', title: 'Transport & setup', desc: 'Move to Place du Luxembourg.' },
-                  { time: '11:00 – 13:00', title: 'Demonstration at Place du Luxembourg ("Place Lux")', desc: 'Symbolic event in front of the European Parliament. Slogans, quote wall, banner signing, possible media presence.' },
-                  { time: '13:00 – 14:00', title: 'Lunch nearby (Ixelles / EU Quarter)', desc: '' },
-                  { time: '14:00 – 15:30', title: 'Book distribution campaign', desc: 'Distribute If Anyone Builds It, Everyone Dies copies in key Brussels areas (Grand-Place, Bourse, Gare Centrale etc.).' },
-                  { time: '15:30 – 16:00', title: 'Coffee break', desc: '' },
-                  { time: '16:00 – 17:30', title: 'Debriefing & next steps (Muntpunt Library)', desc: 'Evaluation, next meetings, continuation of working groups.' },
-                  { time: '18:00', title: 'Informal farewell gathering', desc: 'Optional drinks or dinner to close PauseCon2.' }
-                ].map((item, idx) => (
-                  <div key={idx} style={{
-                    backgroundColor: colors.cardDark,
-                    padding: '1.25rem',
-                    borderRadius: '0.5rem',
-                    borderLeft: '3px solid ' + colors.primary
-                  }}>
-                    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? '0.5rem' : '1rem' }}>
-                      <div style={{ minWidth: isMobile ? 'auto' : '150px', fontWeight: 'bold', color: colors.primary }}>
-                        {item.time}
-                      </div>
-                      <div style={{ flex: 1 }}>
-                        <div style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>{item.title}</div>
-                        {item.desc && <div style={{ fontSize: '0.95rem', color: colors.subtext }}>{item.desc}</div>}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div style={{
-            backgroundColor: colors.cardBackground,
-            padding: '2rem',
-            borderRadius: '0.75rem',
-            textAlign: 'center',
-            border: '2px solid ' + colors.primary
-          }}>
-            <p style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '1rem' }}>
-              Venue: Muntpunt Library, Pl. de la Monnaie 6, 1000 Brussels
-            </p>
-            <p style={{ fontSize: '1.1rem', color: colors.subtext, marginBottom: '1rem' }}>
-              Accommodation: Centerstay Brussels, Rue des Fripiers 17
-            </p>
-            <p style={{ fontSize: '1.1rem', color: colors.subtext }}>
-              Demonstration: Place du Luxembourg
-            </p>
-          </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section style={{ padding: '5rem 2rem', textAlign: 'center', background: 'rgba(0, 0, 0, 0.2)' }}>
