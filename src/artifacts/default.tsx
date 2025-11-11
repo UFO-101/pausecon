@@ -203,7 +203,7 @@ export default function PauseConLanding() {
       {/* Hero Section */}
       <section id="home" style={{ paddingTop: '10rem', paddingBottom: '5rem', textAlign: 'center', padding: '10rem 1rem 5rem', background: 'rgba(0, 0, 0, 0.2)' }}>
         <h1 style={{ fontSize: isMobile ? '3rem' : '6rem', fontWeight: '600', marginBottom: '0rem' }}>PauseCon</h1>
-        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: '400', marginBottom: '2rem' }}>Brussels 2025</h2>
+        <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: '400', marginBottom: '2rem' }}>Brussels 2026</h2>
         
         {/* <div style={{ 
           maxWidth: '800px', 
@@ -224,7 +224,7 @@ export default function PauseConLanding() {
           />
         </div> */}
         
-        <p style={{ fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: 'bold', marginBottom: '3rem' }}>11-13th December 2025</p>
+        <p style={{ fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: 'bold', marginBottom: '3rem' }}>21-23rd February 2026</p>
         
         <a 
           href="https://lu.ma/wtuyu7zy" 
@@ -279,7 +279,7 @@ export default function PauseConLanding() {
             borderLeft: '4px solid ' + colors.primary
           }}>
             <p style={{ marginBottom: '1.5rem', lineHeight: '1.8', fontSize: '1.1rem' }}>
-              The uncontrolled race for superintelligence continues, posing a significant risk of human extinction. But the political window to act is opening. This December, we are bringing our demand for a global, verifiable moratorium to the place where European law is made: Brussels.
+              The uncontrolled race for superintelligence continues, posing a significant risk of human extinction. But the political window to act is opening. This February, we are bringing our demand for a global, verifiable moratorium to the place where European law is made: Brussels.
             </p>
             <p style={{ marginBottom: '1.5rem', lineHeight: '1.8', fontSize: '1.1rem' }}>
               PauseCon 2 is <strong>not a typical conference</strong>. It is a <strong>high-impact, 3-day strategic summit</strong> designed to move the needle and position the European Union as a global initiator for an AI Pause.
@@ -476,7 +476,7 @@ export default function PauseConLanding() {
               borderBottom: '4px solid ' + colors.primary
             }}>
               <h3 style={{ fontSize: '1.75rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.white }}>
-                Day 1 — Thursday 11 December 2025
+                Day 1 — Saturday 21 February 2026
               </h3>
               <p style={{ fontSize: '1.2rem', margin: 0, color: colors.text, fontStyle: 'italic' }}>
                 Foundations & Strategy
@@ -535,7 +535,7 @@ export default function PauseConLanding() {
               borderBottom: '4px solid ' + colors.primary
             }}>
               <h3 style={{ fontSize: '1.75rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.white }}>
-                Day 2 — Friday 12 December 2025
+                Day 2 — Sunday 22 February 2026
               </h3>
               <p style={{ fontSize: '1.2rem', margin: 0, color: colors.text, fontStyle: 'italic' }}>
                 Policymaking & Mobilization
@@ -594,7 +594,7 @@ export default function PauseConLanding() {
               borderBottom: '4px solid ' + colors.primary
             }}>
               <h3 style={{ fontSize: '1.75rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.white }}>
-                Day 3 — Saturday 13 December 2025
+                Day 3 — Monday 23 February 2026
               </h3>
               <p style={{ fontSize: '1.2rem', margin: 0, color: colors.text, fontStyle: 'italic' }}>
                 Public Action & Visibility
