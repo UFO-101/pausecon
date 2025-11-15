@@ -18,6 +18,7 @@ export default function PauseConLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [navHeight, setNavHeight] = useState(0);
+  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
   const currentYear = new Date().getFullYear();
   
@@ -113,6 +114,7 @@ export default function PauseConLanding() {
               <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: colors.text, textDecoration: 'none' }}>About</a>
               {/* <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a> */}
               {/* <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a> */}
+              <a href="#photos" onClick={(e) => scrollToSection(e, 'photos')} style={{ color: colors.text, textDecoration: 'none' }}>Photos</a>
               <a href="#team" onClick={(e) => scrollToSection(e, 'team')} style={{ color: colors.text, textDecoration: 'none' }}>Team</a>
               <a 
                 href="https://lu.ma/wtuyu7zy" 
@@ -176,6 +178,7 @@ export default function PauseConLanding() {
             <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: colors.text, textDecoration: 'none' }}>About</a>
             {/* <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a> */}
             {/* <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a> */}
+            <a href="#photos" onClick={(e) => scrollToSection(e, 'photos')} style={{ color: colors.text, textDecoration: 'none' }}>Photos</a>
             <a href="#team" onClick={(e) => scrollToSection(e, 'team')} style={{ color: colors.text, textDecoration: 'none' }}>Team</a>
             <a 
               href="https://lu.ma/wtuyu7zy" 
@@ -384,6 +387,65 @@ export default function PauseConLanding() {
         </div>
       </section>
 
+      {/* Photos Section - London 2025 */}
+      <section id="photos" style={{ padding: '5rem 2rem', background: 'rgba(0, 0, 0, 0.4)' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center', color: colors.text }}>
+            PauseCon London 2025
+          </h2>
+          <p style={{ fontSize: '1.1rem', textAlign: 'center', marginBottom: '3rem', color: colors.subtext, maxWidth: '800px', margin: '0 auto 3rem' }}>
+            Highlights from our inaugural conference in London, where activists and experts came together to advance the mission of pausing dangerous AI development.
+          </p>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '1.5rem',
+            marginBottom: '2rem'
+          }}>
+            {[
+              'DSC01736.jpg',
+              'DSC01851.jpg',
+              'DSC01877.jpg',
+              'DSC01893.jpg',
+              'DSC01941.jpg',
+              'DSC01943 (2).jpg'
+            ].map((photo, index) => (
+              <div
+                key={index}
+                onClick={() => setSelectedPhoto(photo)}
+                style={{
+                  backgroundColor: colors.cardBackground,
+                  borderRadius: '0.75rem',
+                  overflow: 'hidden',
+                  border: '2px solid ' + colors.cardBorder,
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  cursor: 'pointer'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-8px)';
+                  e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.3)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <img
+                  src={`/london-2025-photos/${photo}`}
+                  alt={`PauseCon London 2025 - Photo ${index + 1}`}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block'
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Speakers Section */}
       {/* <section id="speakers" style={{ padding: '5rem 2rem', background: 'rgba(0, 0, 0, 0.4)' }}>
         <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: colors.text }}>
@@ -567,6 +629,93 @@ export default function PauseConLanding() {
         {/* <p style={{ fontWeight: 'bold', marginBottom: '0.5rem' }}>PauseCon</p> */}
         <p style={{ fontSize: '0.875rem', color: colors.subtext }}>© {currentYear} PauseCon</p>
       </footer>
+
+      {/* Photo Modal */}
+      {selectedPhoto && (
+        <div
+          onClick={() => setSelectedPhoto(null)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.95)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 2000,
+            padding: '2rem',
+            animation: 'fadeIn 0.3s ease-in-out'
+          }}
+        >
+          <style>
+            {`
+              @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+              }
+              @keyframes zoomIn {
+                from { transform: scale(0.8); opacity: 0; }
+                to { transform: scale(1); opacity: 1; }
+              }
+            `}
+          </style>
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: '90vw',
+              maxHeight: '90vh',
+              position: 'relative',
+              animation: 'zoomIn 0.3s ease-in-out'
+            }}
+          >
+            <img
+              src={`/london-2025-photos/${selectedPhoto}`}
+              alt="PauseCon London 2025"
+              style={{
+                maxWidth: '100%',
+                maxHeight: '90vh',
+                width: 'auto',
+                height: 'auto',
+                display: 'block',
+                borderRadius: '0.5rem',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+              }}
+            />
+            <button
+              onClick={() => setSelectedPhoto(null)}
+              style={{
+                position: 'absolute',
+                top: '-1rem',
+                right: '-1rem',
+                backgroundColor: colors.white,
+                color: colors.background,
+                border: 'none',
+                borderRadius: '50%',
+                width: '2.5rem',
+                height: '2.5rem',
+                fontSize: '1.5rem',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: 'bold',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3)',
+                transition: 'transform 0.2s ease'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'scale(1.1)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+              }}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
