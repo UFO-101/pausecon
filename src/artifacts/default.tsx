@@ -34,10 +34,16 @@ export default function PauseConLanding() {
   // ];
 
   const team = [
-    // { name: 'Joseph Miller', title: 'Director', org: 'PauseAI UK', image: '/JosephMiller.jpg' },
+    { name: 'Joseph Miller', title: 'Director', org: 'PauseAI UK', image: '/JosephMiller.jpg' },
+    { name: 'Didier Coeurnelle', title: 'Co-organizer', org: 'PauseCon', image: '/DidierCoeurnelle.jpg' },
     { name: 'Ella Hughes', title: 'Organizing Director', org: 'PauseAI Global', image: '/EllaHughes.jpg' },
     { name: 'Tom Bibby', title: 'Communications Director', org: 'PauseAI Global', image: '/TomBibby.jpg' },
     // { name: 'Patricio Vercesi', title: 'Online Coordinator', org: 'PauseAI Global', image: '/PatricioVercesi.jpg' },
+  ];
+
+  const speakers = [
+    { name: 'Stuart Russell', title: 'Professor of Computer Science', org: 'UC Berkeley', image: '/StuartRussell.jpeg', bio: 'Author of the standard AI textbook used in over 1,500 universities worldwide.' },
+    { name: 'Brando Benifei', title: 'Member of European Parliament', org: 'European Parliament', image: '/BrandoBenifei.jpg', bio: 'Lead architect of the EU AI Act, the world\'s first comprehensive AI law.' },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -112,7 +118,7 @@ export default function PauseConLanding() {
               alignItems: 'center'
             }}>
               <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: colors.text, textDecoration: 'none' }}>About</a>
-              {/* <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a> */}
+              <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a>
               {/* <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a> */}
               <a href="#photos" onClick={(e) => scrollToSection(e, 'photos')} style={{ color: colors.text, textDecoration: 'none' }}>Photos</a>
               <a href="#team" onClick={(e) => scrollToSection(e, 'team')} style={{ color: colors.text, textDecoration: 'none' }}>Team</a>
@@ -176,7 +182,7 @@ export default function PauseConLanding() {
             gap: '1rem'
           }}>
             <a href="#about" onClick={(e) => scrollToSection(e, 'about')} style={{ color: colors.text, textDecoration: 'none' }}>About</a>
-            {/* <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a> */}
+            <a href="#speakers" onClick={(e) => scrollToSection(e, 'speakers')} style={{ color: colors.text, textDecoration: 'none' }}>Speakers</a>
             {/* <a href="#schedule" onClick={(e) => scrollToSection(e, 'schedule')} style={{ color: colors.text, textDecoration: 'none' }}>Schedule</a> */}
             <a href="#photos" onClick={(e) => scrollToSection(e, 'photos')} style={{ color: colors.text, textDecoration: 'none' }}>Photos</a>
             <a href="#team" onClick={(e) => scrollToSection(e, 'team')} style={{ color: colors.text, textDecoration: 'none' }}>Team</a>
@@ -387,6 +393,69 @@ export default function PauseConLanding() {
         </div>
       </section>
 
+      {/* Speakers Section - Brussels 2026 */}
+      <section id="speakers" style={{ padding: '5rem 2rem', background: 'rgba(0, 0, 0, 0.4)' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center', color: colors.text }}>
+            Speakers
+          </h2>
+          <p style={{ fontSize: '1.1rem', textAlign: 'center', marginBottom: '1.5rem', color: colors.subtext }}>
+            Join us in Brussels to hear from leading voices on AI safety and policy.
+          </p>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
+            gap: '2rem',
+            justifyItems: 'center'
+          }}>
+            {speakers.map((speaker, index) => (
+              <div
+                key={index}
+                style={{
+                  backgroundColor: colors.cardBackground,
+                  borderRadius: '1rem',
+                  overflow: 'hidden',
+                  border: '2px solid ' + colors.cardBorder,
+                  maxWidth: '350px',
+                  width: '100%'
+                }}
+              >
+                <div style={{
+                  width: '100%',
+                  aspectRatio: '4 / 5',
+                  overflow: 'hidden'
+                }}>
+                  <img
+                    src={speaker.image}
+                    alt={speaker.name}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'top'
+                    }}
+                  />
+                </div>
+                <div style={{ padding: '1.5rem', textAlign: 'center' }}>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem', color: colors.text }}>
+                    {speaker.name}
+                  </h3>
+                  <p style={{ fontSize: '1rem', color: colors.subtext, marginBottom: '0.25rem' }}>
+                    {speaker.title}
+                  </p>
+                  <p style={{ fontSize: '0.9rem', color: colors.primary, fontWeight: '500', marginBottom: '0.75rem' }}>
+                    {speaker.org}
+                  </p>
+                  <p style={{ fontSize: '0.9rem', color: colors.subtext, lineHeight: '1.5', fontStyle: 'italic' }}>
+                    {speaker.bio}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Photos Section - London 2025 */}
       <section id="photos" style={{ padding: '5rem 2rem', background: 'rgba(0, 0, 0, 0.4)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -577,14 +646,11 @@ export default function PauseConLanding() {
         <h2 style={{ fontSize: isMobile ? '2rem' : '3rem', fontWeight: 'bold', marginBottom: '3rem', textAlign: 'center', color: colors.text }}>
           Our Team
         </h2>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 
-            window.innerWidth > 1200 ? 'repeat(2, 1fr)' : 
-            window.innerWidth > 900 ? 'repeat(2, 1fr)' : 
-            '1fr',
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
           gap: '2rem',
-          maxWidth: '1200px',
+          maxWidth: '1400px',
           margin: '0 auto'
         }}>
           {team.map((member, index) => (
