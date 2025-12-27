@@ -34,11 +34,11 @@ export default function PauseConLanding() {
   // ];
 
   const team = [
+    { name: 'Moritz Pohl', title: 'Volunteer', org: 'PauseAI', image: '/MoritzPohl.jpg' },
     { name: 'Joseph Miller', title: 'Director', org: 'PauseAI UK', image: '/JosephMiller.jpg' },
     { name: 'Didier Coeurnelle', title: 'Co-organizer', org: 'PauseCon', image: '/DidierCoeurnelle.jpg' },
     { name: 'Ella Hughes', title: 'Organizing Director', org: 'PauseAI Global', image: '/EllaHughes.jpg' },
     { name: 'Tom Bibby', title: 'Communications Director', org: 'PauseAI Global', image: '/TomBibby.jpg' },
-    // { name: 'Patricio Vercesi', title: 'Online Coordinator', org: 'PauseAI Global', image: '/PatricioVercesi.jpg' },
   ];
 
   const speakers = [
@@ -699,9 +699,9 @@ export default function PauseConLanding() {
         </h2>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
           gap: '1.5rem',
-          maxWidth: '900px',
+          maxWidth: '1100px',
           margin: '0 auto'
         }}>
           {team.map((member, index) => (
