@@ -6,7 +6,7 @@ const colors = {
   background: '#000000', // Pure black
   navBackground: 'rgba(0, 0, 0, 0.8)', // Semi-transparent for blur
   text: '#F5F5F5', // Softer white text
-  subtext: '#9CA3AF', // Refined gray for subtitles
+  subtext: '#D1D5DB', // Higher contrast gray for body text
   cardBackground: 'rgba(24, 24, 27, 0.8)', // Subtle transparency
   cardBorder: 'rgba(255, 255, 255, 0.08)', // Very subtle border
   white: '#FFFFFF', // Pure white
