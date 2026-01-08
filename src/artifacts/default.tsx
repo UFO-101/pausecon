@@ -43,7 +43,8 @@ export default function PauseConLanding() {
 
   const speakers = [
     { name: 'Stuart Russell', title: 'Professor of Computer Science', org: 'UC Berkeley', image: '/StuartRussell.jpeg', bio: 'Author of the standard AI textbook used in over 1,500 universities worldwide.' },
-    { name: 'Brando Benifei', title: 'Member of European Parliament', org: 'European Parliament', image: '/BrandoBenifei.jpg', bio: 'Lead architect of the EU AI Act, the world\'s first comprehensive AI law.' },
+    { name: 'Brando Benifei', title: 'Member of European Parliament', org: 'European Parliament', image: '/BrandoBenifei.jpg', bio: 'Lead architect of the EU AI Act.' },
+    { name: 'Saskia Bricmont', title: 'Member of European Parliament', org: 'European Parliament', image: '/SaskiaBricmont.jpg', bio: 'Greens/EFA Coordinator, PEGA Committee.' },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
