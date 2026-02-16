@@ -42,16 +42,16 @@ export default function PauseConLanding() {
   ];
 
   const speakers = [
-    { name: 'Stuart Russell', title: 'Professor of Computer Science', org: 'UC Berkeley', image: '/StuartRussell.jpeg', party: '', bio: 'Author of the standard AI textbook used in over 1,500 universities worldwide.' },
-    { name: 'Brando Benifei', title: 'Member of European Parliament', org: 'European Parliament', image: '/BrandoBenifei.jpg', party: 'S&D', bio: 'Lead architect of the EU AI Act.' },
-    { name: 'Saskia Bricmont', title: 'Member of European Parliament', org: 'European Parliament', image: '/SaskiaBricmont.jpg', party: 'Greens/EFA', bio: 'PEGA Committee.' },
-    { name: 'Victor Negrescu', title: 'Vice-President', org: 'European Parliament', image: '/VictorNegrescu.jpg', party: 'S&D', bio: 'BURO, BUDG, SANT, JURI.' },
-    { name: 'Risto Uuk', title: 'Head of European Policy and Research', org: 'Future of Life Institute', image: '/RistoUuk.jpg', party: '', bio: '' },
-    { name: 'Ondřej Kolář', title: 'Member of European Parliament', org: 'European Parliament', image: '/OndrejKolar.jpg', party: 'EPP', bio: 'AFET, DROI.' },
-    { name: 'Rudi Kennes', title: 'Member of European Parliament', org: 'European Parliament', image: '/RudiKennes.jpg', party: 'The Left', bio: 'ITRE, INTA.' },
-    { name: 'Loránt Vincze', title: 'Member of European Parliament', org: 'European Parliament', image: '/LorantVincze.jpg', party: 'EPP', bio: 'AFCO.' },
-    { name: 'Tomislav Sokol', title: 'Member of European Parliament', org: 'European Parliament', image: '/TomislavSokol.jpg', party: 'EPP', bio: 'SANT, IMCO.' },
-    { name: 'André Rodrigues', title: 'Member of European Parliament', org: 'European Parliament', image: '/AndreRodrigues.jpg', party: 'S&D', bio: 'AGRI, PECH.' },
+    { name: 'Ondřej Kolář', title: 'Member of European Parliament', org: 'European Parliament', image: '/OndrejKolar.jpg', party: 'EPP', bio: 'AFET, DROI.', role: 'Co-host' },
+    { name: 'Stuart Russell', title: 'Professor of Computer Science', org: 'UC Berkeley', image: '/StuartRussell.jpeg', party: '', bio: 'Author of the standard AI textbook used in over 1,500 universities worldwide.', role: '' },
+    { name: 'Brando Benifei', title: 'Member of European Parliament', org: 'European Parliament', image: '/BrandoBenifei.jpg', party: 'S&D', bio: 'Lead architect of the EU AI Act.', role: '' },
+    { name: 'Saskia Bricmont', title: 'Member of European Parliament', org: 'European Parliament', image: '/SaskiaBricmont.jpg', party: 'Greens/EFA', bio: 'PEGA Committee.', role: '' },
+    { name: 'Victor Negrescu', title: 'Vice-President', org: 'European Parliament', image: '/VictorNegrescu.jpg', party: 'S&D', bio: 'BURO, BUDG, SANT, JURI.', role: '' },
+    { name: 'Risto Uuk', title: 'Head of European Policy and Research', org: 'Future of Life Institute', image: '/RistoUuk.jpg', party: '', bio: '', role: '' },
+    { name: 'Rudi Kennes', title: 'Member of European Parliament', org: 'European Parliament', image: '/RudiKennes.jpg', party: 'The Left', bio: 'ITRE, INTA.', role: '' },
+    { name: 'Loránt Vincze', title: 'Member of European Parliament', org: 'European Parliament', image: '/LorantVincze.jpg', party: 'EPP', bio: 'AFCO.', role: '' },
+    { name: 'Tomislav Sokol', title: 'Member of European Parliament', org: 'European Parliament', image: '/TomislavSokol.jpg', party: 'EPP', bio: 'SANT, IMCO.', role: '' },
+    { name: 'André Rodrigues', title: 'Member of European Parliament', org: 'European Parliament', image: '/AndreRodrigues.jpg', party: 'S&D', bio: 'AGRI, PECH.', role: '' },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -461,6 +461,22 @@ export default function PauseConLanding() {
                   />
                 </div>
                 <div style={{ padding: '1rem', textAlign: 'center' }}>
+                  {speaker.role && (
+                    <div style={{
+                      background: `linear-gradient(to right, ${colors.primary}, transparent)`,
+                      margin: '-1rem -1rem 0.75rem -1rem',
+                      padding: '0.35rem 0.75rem',
+                    }}>
+                      <span style={{
+                        fontSize: '0.7rem',
+                        fontWeight: '700',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                        color: colors.background,
+                      }}>
+                      {speaker.role}</span>
+                    </div>
+                  )}
                   <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '0.25rem', color: colors.text }}>
                     {speaker.name}
                   </h3>
