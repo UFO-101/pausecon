@@ -54,6 +54,15 @@ export default function PauseConLanding() {
     { name: 'André Rodrigues', title: 'Member of European Parliament', org: 'European Parliament', image: '/AndreRodrigues.jpg', party: 'S&D', bio: 'AGRI, PECH.', role: '' },
   ];
 
+  const facilitators = [
+    { name: 'John Sherman', image: '/JohnSherman.jpeg', talk: 'Big Tent Public Engagement', bio: 'Peabody Award–winning journalist, filmmaker, and entrepreneur. CEO of Storyfarm, President of the AI Risk Network, and host of the For Humanity podcast.' },
+    { name: 'Liron Shapira', image: '/LironShapira.jpg', talk: 'AI Activism Funnel', bio: 'Rationalist, entrepreneur, and host of Doom Debates—a show encouraging top experts to answer why we\'re all about to die or not.' },
+    { name: 'David Wood', image: '/DavidWood.jpg', talk: 'Overcoming the AI Motivation Paradox', bio: 'Chair of London Futurists and author of 12 books about the future. Co-founded Symbian, whose OS powered the first 500 million smartphones.' },
+    { name: 'Robert Whitfield', image: '/RobertWhitfield.jpg', talk: 'GAIGANow and AI Global Governance', bio: 'Campaigner for AI Global Governance for the past 7 years and convener of GAIGANow, the Global AI Governance Alliance.' },
+    { name: 'Maxime Fournes', image: '/MaximeFournes.jpg', talk: 'Why Pause?', bio: 'Former Deep Learning & ML expert with 10+ years of experience. Now leading Pause, dedicated to promoting responsible AI development and raising awareness about catastrophic risks.' },
+    { name: 'Axiom', image: '/Axiom.jpg', talk: 'Coercion over Cooperation: Forcing Governments to Answer on AI Risk Using the ECHR', bio: 'Former stand-up comedian from Scotland who spent the last 6 months working on a legal procedure to force the UK government to take a public stance on AI existential risk.' },
+  ];
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault();
     const element = document.getElementById(sectionId);
@@ -127,7 +136,7 @@ export default function PauseConLanding() {
               gap: '2.5rem',
               alignItems: 'center'
             }}>
-              {['About', 'Speakers', 'Photos', 'Team'].map((item) => (
+              {['About', 'Speakers', 'Facilitators', 'Photos', 'Team'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -202,7 +211,7 @@ export default function PauseConLanding() {
             gap: '1.25rem',
             borderTop: `1px solid ${colors.cardBorder}`
           }}>
-            {['About', 'Speakers', 'Photos', 'Team'].map((item) => (
+            {['About', 'Speakers', 'Facilitators', 'Photos', 'Team'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -507,6 +516,71 @@ export default function PauseConLanding() {
                       {speaker.bio}
                     </p>
                   )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Session Facilitators */}
+      <section id="facilitators" style={{ padding: isMobile ? '3rem 1.5rem' : '4rem 2rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{
+            fontSize: isMobile ? '1.75rem' : '2.25rem',
+            fontWeight: '600',
+            marginBottom: '0.75rem',
+            textAlign: 'center',
+            color: colors.text,
+            letterSpacing: '-0.02em'
+          }}>
+            Session Facilitators
+          </h2>
+          <p style={{ fontSize: '1rem', textAlign: 'center', marginBottom: '3rem', color: colors.subtext }}>
+            Leading discussions and workshops at PauseCon Brussels.
+          </p>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
+            gap: '1.5rem',
+          }}>
+            {facilitators.map((facilitator, index) => (
+              <div
+                key={index}
+                style={{
+                  backgroundColor: colors.cardBackground,
+                  borderRadius: '0.75rem',
+                  overflow: 'hidden',
+                  border: `1px solid ${colors.cardBorder}`,
+                  width: '100%'
+                }}
+              >
+                <div style={{
+                  width: '100%',
+                  aspectRatio: '4 / 5',
+                  overflow: 'hidden'
+                }}>
+                  <img
+                    src={facilitator.image}
+                    alt={facilitator.name}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'top'
+                    }}
+                  />
+                </div>
+                <div style={{ padding: '1rem', textAlign: 'center' }}>
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '0.25rem', color: colors.text }}>
+                    {facilitator.name}
+                  </h3>
+                  <p style={{ fontSize: '0.8rem', color: colors.primary, fontWeight: '500', marginBottom: '0.5rem' }}>
+                    {facilitator.talk}
+                  </p>
+                  <p style={{ fontSize: '0.75rem', color: colors.subtext, lineHeight: '1.5', marginBottom: 0 }}>
+                    {facilitator.bio}
+                  </p>
                 </div>
               </div>
             ))}
