@@ -37,8 +37,8 @@ export default function PauseConLanding() {
     { name: 'Moritz Pohl', title: 'Volunteer', org: 'PauseAI', image: '/MoritzPohl.jpg' },
     { name: 'Joseph Miller', title: 'Director', org: 'PauseAI UK', image: '/JosephMiller.jpg' },
     { name: 'Didier Coeurnelle', title: 'Co-organizer', org: 'PauseCon', image: '/DidierCoeurnelle.jpg' },
-    { name: 'Ella Hughes', title: 'Organizing Director', org: 'PauseAI Global', image: '/EllaHughes.jpg' },
-    { name: 'Tom Bibby', title: 'Communications Director', org: 'PauseAI Global', image: '/TomBibby.jpg' },
+    { name: 'Irina Tavera', title: 'Organizing Director', org: 'PauseAI Global', image: '/IrinaTavera.jpg' },
+    { name: 'Matilda Da Rui', title: 'Deputy Director', org: 'PauseAI UK', image: '/MatildaDaRui.jpeg' },
   ];
 
   const speakers = [
