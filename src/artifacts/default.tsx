@@ -42,9 +42,16 @@ export default function PauseConLanding() {
   ];
 
   const speakers = [
-    { name: 'Stuart Russell', title: 'Professor of Computer Science', org: 'UC Berkeley', image: '/StuartRussell.jpeg', bio: 'Author of the standard AI textbook used in over 1,500 universities worldwide.' },
-    { name: 'Brando Benifei', title: 'Member of European Parliament', org: 'European Parliament', image: '/BrandoBenifei.jpg', bio: 'Lead architect of the EU AI Act.' },
-    { name: 'Saskia Bricmont', title: 'Member of European Parliament', org: 'European Parliament', image: '/SaskiaBricmont.jpg', bio: 'Greens/EFA Coordinator, PEGA Committee.' },
+    { name: 'Stuart Russell', title: 'Professor of Computer Science', org: 'UC Berkeley', image: '/StuartRussell.jpeg', party: '', bio: 'Author of the standard AI textbook used in over 1,500 universities worldwide.' },
+    { name: 'Brando Benifei', title: 'Member of European Parliament', org: 'European Parliament', image: '/BrandoBenifei.jpg', party: 'S&D', bio: 'Lead architect of the EU AI Act.' },
+    { name: 'Saskia Bricmont', title: 'Member of European Parliament', org: 'European Parliament', image: '/SaskiaBricmont.jpg', party: 'Greens/EFA', bio: 'PEGA Committee.' },
+    { name: 'Victor Negrescu', title: 'Vice-President', org: 'European Parliament', image: '/VictorNegrescu.jpg', party: 'S&D', bio: 'BURO, BUDG, SANT, JURI.' },
+    { name: 'Risto Uuk', title: 'Head of European Policy and Research', org: 'Future of Life Institute', image: '/RistoUuk.jpg', party: '', bio: '' },
+    { name: 'Ondřej Kolář', title: 'Member of European Parliament', org: 'European Parliament', image: '/OndrejKolar.jpg', party: 'EPP', bio: 'AFET, DROI.' },
+    { name: 'Rudi Kennes', title: 'Member of European Parliament', org: 'European Parliament', image: '/RudiKennes.jpg', party: 'The Left', bio: 'ITRE, INTA.' },
+    { name: 'Loránt Vincze', title: 'Member of European Parliament', org: 'European Parliament', image: '/LorantVincze.jpg', party: 'EPP', bio: 'AFCO.' },
+    { name: 'Tomislav Sokol', title: 'Member of European Parliament', org: 'European Parliament', image: '/TomislavSokol.jpg', party: 'EPP', bio: 'SANT, IMCO.' },
+    { name: 'André Rodrigues', title: 'Member of European Parliament', org: 'European Parliament', image: '/AndreRodrigues.jpg', party: 'S&D', bio: 'AGRI, PECH.' },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -407,7 +414,7 @@ export default function PauseConLanding() {
 
       {/* Speakers Section - Brussels 2026 */}
       <section id="speakers" style={{ padding: isMobile ? '3rem 1.5rem' : '4rem 2rem' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{
             fontSize: isMobile ? '1.75rem' : '2.25rem',
             fontWeight: '600',
@@ -423,9 +430,8 @@ export default function PauseConLanding() {
           </p>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
+            gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(auto-fit, minmax(190px, 1fr))',
             gap: '1.5rem',
-            justifyItems: 'center'
           }}>
             {speakers.map((speaker, index) => (
               <div
@@ -435,7 +441,6 @@ export default function PauseConLanding() {
                   borderRadius: '0.75rem',
                   overflow: 'hidden',
                   border: `1px solid ${colors.cardBorder}`,
-                  maxWidth: '320px',
                   width: '100%'
                 }}
               >
@@ -455,19 +460,37 @@ export default function PauseConLanding() {
                     }}
                   />
                 </div>
-                <div style={{ padding: '1.25rem', textAlign: 'center' }}>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.25rem', color: colors.text }}>
+                <div style={{ padding: '1rem', textAlign: 'center' }}>
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '0.25rem', color: colors.text }}>
                     {speaker.name}
                   </h3>
-                  <p style={{ fontSize: '0.9rem', color: colors.subtext, marginBottom: '0.125rem' }}>
+                  <p style={{ fontSize: '0.8rem', color: colors.subtext, marginBottom: '0.125rem' }}>
                     {speaker.title}
                   </p>
-                  <p style={{ fontSize: '0.85rem', color: colors.primary, fontWeight: '500', marginBottom: '0.75rem' }}>
+                  <p style={{ fontSize: '0.8rem', color: colors.primary, fontWeight: '500', marginBottom: speaker.party ? '0.5rem' : (speaker.bio ? '0.5rem' : 0) }}>
                     {speaker.org}
                   </p>
-                  <p style={{ fontSize: '0.85rem', color: colors.subtext, lineHeight: '1.5', fontStyle: 'italic', marginBottom: 0 }}>
-                    {speaker.bio}
-                  </p>
+                  {speaker.party && (
+                    <span style={{
+                      display: 'inline-block',
+                      fontSize: '0.7rem',
+                      fontWeight: '600',
+                      color: colors.text,
+                      backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                      border: `1px solid rgba(255, 255, 255, 0.15)`,
+                      borderRadius: '999px',
+                      padding: '0.15rem 0.6rem',
+                      marginBottom: speaker.bio ? '0.5rem' : 0,
+                      letterSpacing: '0.03em'
+                    }}>
+                      {speaker.party}
+                    </span>
+                  )}
+                  {speaker.bio && (
+                    <p style={{ fontSize: '0.75rem', color: colors.subtext, lineHeight: '1.5', fontStyle: 'italic', marginBottom: 0 }}>
+                      {speaker.bio}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}
