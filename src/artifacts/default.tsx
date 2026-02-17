@@ -136,7 +136,7 @@ export default function PauseConLanding() {
               gap: '2.5rem',
               alignItems: 'center'
             }}>
-              {['About', 'Speakers', 'Facilitators', 'Photos', 'Team'].map((item) => (
+              {['About', 'Speakers', 'Facilitators', 'Photos', 'Protest', 'Team'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -211,7 +211,7 @@ export default function PauseConLanding() {
             gap: '1.25rem',
             borderTop: `1px solid ${colors.cardBorder}`
           }}>
-            {['About', 'Speakers', 'Facilitators', 'Photos', 'Team'].map((item) => (
+            {['About', 'Speakers', 'Facilitators', 'Photos', 'Protest', 'Team'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -797,6 +797,65 @@ export default function PauseConLanding() {
         >
           Apply Now
         </a>
+      </section>
+
+      {/* Protest Section */}
+      <section id="protest" style={{ padding: isMobile ? '3rem 1.5rem' : '4rem 2rem' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{
+            fontSize: isMobile ? '1.75rem' : '2.25rem',
+            fontWeight: '600',
+            marginBottom: '2rem',
+            textAlign: 'center',
+            color: colors.text,
+            letterSpacing: '-0.02em'
+          }}>
+            Protest at the European Parliament
+          </h2>
+          <div style={{
+            borderRadius: '0.75rem',
+            overflow: 'hidden',
+            marginBottom: '2rem',
+            border: `1px solid ${colors.cardBorder}`
+          }}>
+            <img
+              src="/london-2025-photos/LondonProtest2025.jpg"
+              alt="PauseAI Protest"
+              style={{
+                width: '100%',
+                height: isMobile ? '250px' : '400px',
+                objectFit: 'cover'
+              }}
+            />
+          </div>
+          <p style={{ fontSize: '1rem', lineHeight: '1.75', color: colors.subtext, marginBottom: '1.5rem', textAlign: 'center', maxWidth: '600px', margin: '0 auto 1.5rem' }}>
+            On the final day of the conference, we will demonstrate outside the European Parliament to call for the EU to initiate negotiations for a global treaty to pause AI development.
+          </p>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+            <div>
+              <p style={{ fontSize: '1.1rem', fontWeight: '600', color: colors.text, marginBottom: '0.15rem' }}>Monday, February 23</p>
+              <p style={{ fontSize: '0.95rem', color: colors.primary, fontWeight: '500' }}>3:30 PM – 4:30 PM</p>
+            </div>
+            <p style={{ fontSize: '0.95rem', color: colors.subtext }}>Place du Luxembourg, Brussels</p>
+            <a
+              href="https://luma.com/6msceffo"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                padding: '0.6rem 1.5rem',
+                backgroundColor: colors.primary,
+                color: colors.background,
+                borderRadius: '0.5rem',
+                textDecoration: 'none',
+                fontWeight: '600',
+                fontSize: '0.95rem'
+              }}
+            >
+              RSVP on Luma
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Team Section */}
