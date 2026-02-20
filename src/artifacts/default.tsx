@@ -136,7 +136,7 @@ export default function PauseConLanding() {
               gap: '2.5rem',
               alignItems: 'center'
             }}>
-              {['About', 'Speakers', 'Facilitators', 'Photos', 'Protest', 'Team'].map((item) => (
+              {['About', 'Speakers', 'Facilitators', 'Programme', 'Photos', 'Protest', 'Team'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -211,7 +211,7 @@ export default function PauseConLanding() {
             gap: '1.25rem',
             borderTop: `1px solid ${colors.cardBorder}`
           }}>
-            {['About', 'Speakers', 'Facilitators', 'Photos', 'Protest', 'Team'].map((item) => (
+            {['About', 'Speakers', 'Facilitators', 'Programme', 'Photos', 'Protest', 'Team'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -585,6 +585,41 @@ export default function PauseConLanding() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Programme Section */}
+      <section id="programme" style={{ padding: isMobile ? '3rem 1.5rem' : '4rem 2rem' }}>
+        <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{
+            fontSize: isMobile ? '1.75rem' : '2.25rem',
+            fontWeight: '600',
+            marginBottom: '0.75rem',
+            color: colors.text,
+            letterSpacing: '-0.02em'
+          }}>
+            Programme
+          </h2>
+          <p style={{ fontSize: '1rem', marginBottom: '2rem', color: colors.subtext }}>
+            View the full schedule for PauseCon Brussels 2026.
+          </p>
+          <a
+            href="/PauseConProgramme.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              padding: '0.75rem 2rem',
+              backgroundColor: colors.primary,
+              color: colors.background,
+              borderRadius: '0.5rem',
+              textDecoration: 'none',
+              fontWeight: '600',
+              fontSize: '1rem'
+            }}
+          >
+            Download Programme (PDF)
+          </a>
         </div>
       </section>
 
