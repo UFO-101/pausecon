@@ -220,7 +220,8 @@ export default function PauseConLondon2025() {
                     height: isMobile ? '90px' : '110px',
                     borderRadius: '50%',
                     objectFit: 'cover',
-                    marginBottom: '0.75rem'
+                    display: 'block',
+                    margin: '0 auto 0.75rem'
                   }}
                 />
                 <h3 style={{ fontSize: isMobile ? '0.95rem' : '1.05rem', fontWeight: '600', marginBottom: '0.25rem' }}>
@@ -268,7 +269,8 @@ export default function PauseConLondon2025() {
                     height: '100px',
                     borderRadius: '50%',
                     objectFit: 'cover',
-                    marginBottom: '0.75rem'
+                    display: 'block',
+                    margin: '0 auto 0.75rem'
                   }}
                 />
                 <h3 style={{ fontSize: '1.05rem', fontWeight: '600', marginBottom: '0.25rem' }}>
