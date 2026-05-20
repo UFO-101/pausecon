@@ -415,13 +415,26 @@ export default function PauseConHome() {
             gap: '1.5rem'
           }}>
             {pastEditions.map((edition) => (
-              <div
+              <a
                 key={edition.href}
+                href={edition.href}
                 style={{
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  display: 'block',
                   backgroundColor: colors.cardBackground,
                   borderRadius: '0.75rem',
                   border: `1px solid ${colors.cardBorder}`,
-                  overflow: 'hidden'
+                  overflow: 'hidden',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(255, 152, 30, 0.4)';
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.borderColor = colors.cardBorder;
+                  e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
                 <div style={{ aspectRatio: '16 / 9', overflow: 'hidden', backgroundColor: '#111' }}>
@@ -445,11 +458,14 @@ export default function PauseConHome() {
                   <h3 style={{ fontSize: '1.4rem', fontWeight: '600', marginBottom: '0.75rem', letterSpacing: '-0.01em' }}>
                     {edition.title}
                   </h3>
-                  <p style={{ fontSize: '0.95rem', color: colors.subtext, lineHeight: '1.6', marginBottom: 0 }}>
+                  <p style={{ fontSize: '0.95rem', color: colors.subtext, lineHeight: '1.6', marginBottom: '1rem' }}>
                     {edition.summary}
                   </p>
+                  <span style={{ color: colors.primary, fontSize: '0.9rem', fontWeight: '600' }}>
+                    View edition →
+                  </span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
