@@ -135,6 +135,21 @@ export default function PauseConHome() {
                 );
               })}
               <a
+                href="/sponsor"
+                onMouseOver={(e) => { e.currentTarget.style.color = colors.white; }}
+                onMouseOut={(e) => { e.currentTarget.style.color = colors.subtext; }}
+                style={{
+                  color: colors.subtext,
+                  textDecoration: 'none',
+                  fontSize: '0.9rem',
+                  fontWeight: '500',
+                  transition: 'color 0.2s ease',
+                  letterSpacing: '0.01em'
+                }}
+              >
+                Sponsor
+              </a>
+              <a
                 href={speakerMailto}
                 onMouseOver={(e) => {
                   e.currentTarget.style.backgroundColor = 'rgba(255, 152, 30, 0.15)';
@@ -193,6 +208,12 @@ export default function PauseConHome() {
                 </a>
               );
             })}
+            <a
+              href="/sponsor"
+              style={{ color: colors.subtext, textDecoration: 'none', fontSize: '1rem', fontWeight: '500' }}
+            >
+              Sponsor
+            </a>
             <a
               href={speakerMailto}
               style={{
