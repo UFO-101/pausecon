@@ -15,6 +15,7 @@ const colors = {
 };
 
 const SPEAKER_INTEREST_EMAIL = 'maxime@pauseia.fr';
+const SIGNUP_URL = 'https://luma.com/4be2eqz9?utm_source=pausecon-website';
 
 const pastSpeakers = [
   { name: 'Stuart Russell', title: 'Professor of Computer Science', org: 'UC Berkeley', image: '/StuartRussell.jpeg', edition: 'Brussels 2026' },
@@ -243,21 +244,6 @@ export default function PauseConHome() {
         paddingLeft: '1.5rem',
         paddingRight: '1.5rem'
       }}>
-        <div style={{
-          display: 'inline-block',
-          padding: '0.4rem 1rem',
-          marginBottom: '1.75rem',
-          borderRadius: '999px',
-          border: '1px solid rgba(255, 152, 30, 0.35)',
-          backgroundColor: 'rgba(255, 152, 30, 0.08)',
-          fontSize: '0.75rem',
-          fontWeight: '600',
-          letterSpacing: '0.12em',
-          color: colors.primary,
-          textTransform: 'uppercase'
-        }}>
-          Next Edition
-        </div>
         <h1 style={{
           fontSize: isMobile ? '3.5rem' : '5.5rem',
           fontWeight: '600',
@@ -290,7 +276,9 @@ export default function PauseConHome() {
 
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a
-            href={speakerMailto}
+            href={SIGNUP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onMouseOver={(e) => {
               e.currentTarget.style.backgroundColor = colors.primary;
               e.currentTarget.style.color = colors.background;
@@ -317,7 +305,7 @@ export default function PauseConHome() {
               letterSpacing: '0.02em'
             }}
           >
-            Register Speaker Interest
+            Sign up
           </a>
         </div>
       </section>
