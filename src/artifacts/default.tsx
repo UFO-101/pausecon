@@ -14,7 +14,6 @@ const colors = {
   cardDark: '#18181B',
 };
 
-const SPEAKER_INTEREST_EMAIL = 'maxime@pauseia.fr';
 const SIGNUP_URL = 'https://luma.com/4be2eqz9?utm_source=pausecon-website';
 
 const pastSpeakers = [
@@ -81,8 +80,6 @@ export default function PauseConHome() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [isMenuOpen, isMobile]);
-
-  const speakerMailto = `mailto:${SPEAKER_INTEREST_EMAIL}?subject=PauseCon%20London%202026%20%E2%80%94%20Speaker%20Interest&body=Hi%2C%0A%0AI%27d%20like%20to%20register%20interest%20in%20speaking%20at%20PauseCon%20London%202026.%0A%0AName%3A%0AOrganization%3A%0AShort%20bio%2Flink%3A%0AProposed%20topic%3A%0A%0AThanks%21`;
 
   return (
     <div style={{
@@ -151,7 +148,9 @@ export default function PauseConHome() {
                 Sponsor
               </a>
               <a
-                href={speakerMailto}
+                href={SIGNUP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onMouseOver={(e) => {
                   e.currentTarget.style.backgroundColor = 'rgba(255, 152, 30, 0.15)';
                   e.currentTarget.style.borderColor = 'rgba(255, 152, 30, 0.5)';
@@ -172,7 +171,7 @@ export default function PauseConHome() {
                   transition: 'all 0.2s ease'
                 }}
               >
-                Register Speaker Interest
+                Sign up
               </a>
             </div>
           )}
@@ -216,7 +215,9 @@ export default function PauseConHome() {
               Sponsor
             </a>
             <a
-              href={speakerMailto}
+              href={SIGNUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 backgroundColor: 'transparent',
                 color: colors.primary,
@@ -228,7 +229,7 @@ export default function PauseConHome() {
                 textAlign: 'center'
               }}
             >
-              Register Speaker Interest
+              Sign up
             </a>
           </div>
         )}
@@ -272,7 +273,8 @@ export default function PauseConHome() {
           letterSpacing: '0.01em'
         }}>
           The strategic summit for those building the global movement to pause the development of superintelligence. Exact date, venue, and programme to be announced soon.
-        </p>
+        </p>5D88vPg5aiKv!olj9r*uN
+        NgBVDy3^k0&cRwln^pm&G
 
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a
