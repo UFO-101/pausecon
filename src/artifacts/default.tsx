@@ -273,8 +273,7 @@ export default function PauseConHome() {
           letterSpacing: '0.01em'
         }}>
           The strategic summit for those building the global movement to pause the development of superintelligence. Exact date, venue, and programme to be announced soon.
-        </p>5D88vPg5aiKv!olj9r*uN
-        NgBVDy3^k0&cRwln^pm&G
+        </p>
 
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a
