@@ -27,8 +27,8 @@ const speakers = [
 
 const hosts = [
   { name: 'Joseph Miller', title: 'Director', org: 'PauseAI UK', image: '/JosephMiller.jpg' },
-  { name: 'Ella Hughes', title: 'Organizer', org: 'PauseAI UK', image: '/EllaHughes.jpg' },
-  { name: 'Tom Bibby', title: 'Organizer', org: 'PauseAI UK', image: '/TomBibby.jpg' },
+  { name: 'Ella Hughes', title: 'Organiser', org: 'PauseAI UK', image: '/EllaHughes.jpg' },
+  { name: 'Tom Bibby', title: 'Organiser', org: 'PauseAI UK', image: '/TomBibby.jpg' },
 ];
 
 const galleryPhotos = [
@@ -178,10 +178,10 @@ export default function PauseConLondon2025() {
             border: `1px solid ${colors.cardBorder}`
           }}>
             <p style={{ marginBottom: '1.25rem', lineHeight: '1.75', fontSize: '1rem', color: colors.subtext }}>
-              The first PauseCon was a development and training conference for PauseAI volunteers held in Shoreditch, London. Across two days, attendees learned about <strong style={{ color: colors.text }}>community building, social media strategy and digital organizing</strong>.
+              The first PauseCon was a development and training conference for PauseAI volunteers held in Shoreditch, London. Across two days, attendees learned about <strong style={{ color: colors.text }}>community building, social media strategy and digital organising</strong>.
             </p>
             <p style={{ lineHeight: '1.75', fontSize: '1rem', color: colors.subtext, marginBottom: 0 }}>
-              The event culminated in our largest public protest to date — calling on world leaders to act on existential AI risk.
+              The event culminated in our largest public protest to date, calling on world leaders to act on existential AI risk.
             </p>
           </div>
         </div>
