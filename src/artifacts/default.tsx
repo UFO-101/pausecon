@@ -40,7 +40,7 @@ const pastEditions = [
   {
     title: 'PauseCon London',
     date: 'June 2025',
-    summary: 'The first PauseCon — a development and training conference for volunteers, culminating in our largest public protest to date.',
+    summary: 'The first PauseCon - a development and training conference for volunteers, culminating in our largest public protest to date.',
     image: '/london-2025-photos/LondonProtest2025.jpg',
     href: '/london-2025',
   },
@@ -330,10 +330,10 @@ export default function PauseConHome() {
             border: `1px solid ${colors.cardBorder}`
           }}>
             <p style={{ marginBottom: '1.25rem', lineHeight: '1.75', fontSize: '1rem', color: colors.subtext }}>
-              PauseCon is the gathering for activists, researchers, policymakers and organizers working to prevent the development of unsafe superintelligent AI. It is part conference, part organising workshop, and part public action.
+              PauseCon is the gathering for activists, researchers, policymakers and organisers working to prevent the development of unsafe superintelligent AI. It is part conference, part organising workshop, and part civic action.
             </p>
             <p style={{ marginBottom: 0, lineHeight: '1.75', fontSize: '1rem', color: colors.subtext }}>
-              Past editions brought together leading voices in AI safety, members of the European Parliament, and a growing international community of organizers. London 2026 will be our third edition.
+              Past editions brought together leading voices in AI safety, members of the European Parliament, and a growing international community of organisers. London 2026 will be our third edition.
             </p>
           </div>
         </div>
@@ -349,7 +349,7 @@ export default function PauseConHome() {
             textAlign: 'center',
             letterSpacing: '-0.02em'
           }}>
-            Past speakers have included
+            Past speakers include
           </h2>
           <p style={{
             textAlign: 'center',
