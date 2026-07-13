@@ -435,7 +435,7 @@ export default function PauseConHome() {
               The conference will start with a packed weekend of workshops, talks and direct action. Attendees will receive training in community building, social media strategy and digital organising, along with a canvassing session to put those skills into practice. On Monday 7 September, attendees will have an opportunity to attend a panel discussion featuring prominent UK politicians with legislative expertise on AI.
             </p>
             <p style={{ marginBottom: 0, lineHeight: '1.75', fontSize: '1rem', color: colors.subtext }}>
-              Past editions brought together leading voices in AI safety, members of the European Parliament, and a growing international community of organizers. London 2026 will be our third edition.
+              Past editions brought together leading voices in AI safety, members of the European Parliament, and a growing international community of organisers. London 2026 will be our third edition.
             </p>
           </div>
           <div style={{
@@ -732,7 +732,7 @@ export default function PauseConHome() {
           </a>
         </div>
         <p style={{ marginBottom: '0.5rem' }}>
-          Organized by <a href="https://pauseai.info" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary, textDecoration: 'none' }}>PauseAI</a>
+          Organised by <a href="https://pauseai.info" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary, textDecoration: 'none' }}>PauseAI</a>
         </p>
         <p style={{ marginBottom: 0 }}>© {currentYear} PauseAI</p>
       </footer>

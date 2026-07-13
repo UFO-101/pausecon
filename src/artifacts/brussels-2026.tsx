@@ -36,8 +36,8 @@ export default function PauseConLanding() {
   const team = [
     { name: 'Moritz Pohl', title: 'Volunteer', org: 'PauseAI', image: '/MoritzPohl.jpg' },
     { name: 'Joseph Miller', title: 'Director', org: 'PauseAI UK', image: '/JosephMiller.jpg' },
-    { name: 'Didier Coeurnelle', title: 'Co-organizer', org: 'PauseCon', image: '/DidierCoeurnelle.jpg' },
-    { name: 'Irina Tavera', title: 'Organizing Director', org: 'PauseAI Global', image: '/IrinaTavera.jpg' },
+    { name: 'Didier Coeurnelle', title: 'Co-organiser', org: 'PauseCon', image: '/DidierCoeurnelle.jpg' },
+    { name: 'Irina Tavera', title: 'Organising Director', org: 'PauseAI Global', image: '/IrinaTavera.jpg' },
     { name: 'Matilda Da Rui', title: 'Deputy Director', org: 'PauseAI UK', image: '/MatildaDaRui.jpeg' },
   ];
 
