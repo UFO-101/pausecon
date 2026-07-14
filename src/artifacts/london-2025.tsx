@@ -86,10 +86,14 @@ export default function PauseConLondon2025() {
         borderBottom: `1px solid ${colors.cardBorder}`
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: colors.text }}>
-            <img src="/Pause Logo.svg" alt="PauseCon Logo" style={{ width: '32px', height: '32px' }} />
-            <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
-          </a>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <a href="https://pauseai.info" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
+              <img src="/PauseAI-icon.svg" alt="PauseAI" style={{ width: '32px', height: '32px' }} />
+            </a>
+            <a href="/" style={{ textDecoration: 'none', color: colors.text }}>
+              <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
+            </a>
+          </div>
           <a
             href="/"
             style={{
