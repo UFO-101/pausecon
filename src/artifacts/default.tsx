@@ -55,7 +55,7 @@ const logistics = [
   },
   {
     title: 'How to apply',
-    description: 'When you register, you will be asked several questions which will serve as your application. If approved, you will receive an email with a link to confirm your accommodation needs. Application deadline: 21 August 2026. Applications are reviewed on a rolling basis and earlier applications are more likely to be accepted – we may need to close registration early if we reach capacity.',
+    description: 'When you register, you will be asked several questions which will serve as your application. If approved, you will receive an email with a link to confirm your accommodation needs. Application deadline: 21 August 2026. Applications are reviewed on a rolling basis and earlier applications are more likely to be accepted – we recommend applying as soon as possible, as we may need to close registration early if we reach capacity.',
   },
 ];
 
@@ -235,7 +235,7 @@ export default function PauseConHome() {
                   transition: 'all 0.2s ease'
                 }}
               >
-                Sign up
+                Apply Now
               </a>
             </div>
           )}
@@ -301,7 +301,7 @@ export default function PauseConHome() {
                 textAlign: 'center'
               }}
             >
-              Sign up
+              Apply Now
             </a>
           </div>
         )}
@@ -378,37 +378,7 @@ export default function PauseConHome() {
               letterSpacing: '0.02em'
             }}
           >
-            Sign up
-          </a>
-          <a
-            href={APPLY_TO_SPEAK_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onMouseOver={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
-              e.currentTarget.style.color = colors.white;
-              e.currentTarget.style.transform = 'translateY(-2px)';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)';
-              e.currentTarget.style.color = colors.subtext;
-              e.currentTarget.style.transform = 'translateY(0)';
-            }}
-            style={{
-              display: 'inline-block',
-              backgroundColor: 'transparent',
-              color: colors.subtext,
-              padding: isMobile ? '0.875rem 1.75rem' : '1rem 2.5rem',
-              fontSize: isMobile ? '1rem' : '1.05rem',
-              borderRadius: '0.5rem',
-              border: '2px solid rgba(255, 255, 255, 0.25)',
-              fontWeight: '600',
-              textDecoration: 'none',
-              transition: 'all 0.2s ease',
-              letterSpacing: '0.02em'
-            }}
-          >
-            Apply to Speak
+            Apply Now
           </a>
         </div>
       </section>
