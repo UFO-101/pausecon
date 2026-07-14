@@ -185,7 +185,7 @@ export default function PauseConLondon2025() {
               The first PauseCon was a development and training conference for PauseAI volunteers held in Shoreditch, London. Across two days, attendees learned about <strong style={{ color: colors.text }}>community building, social media strategy and digital organising</strong>.
             </p>
             <p style={{ lineHeight: '1.75', fontSize: '1rem', color: colors.subtext, marginBottom: 0 }}>
-              The event culminated in our largest public protest to date – calling on world leaders to act on existential AI risk.
+              The event culminated in our largest public protest to date, calling on world leaders to act on existential AI risk.
             </p>
           </div>
         </div>
