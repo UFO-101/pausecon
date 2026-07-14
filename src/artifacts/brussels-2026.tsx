@@ -56,7 +56,7 @@ export default function PauseConLanding() {
 
   const facilitators = [
     { name: 'John Sherman', image: '/JohnSherman.jpeg', talk: 'Big Tent Public Engagement', bio: 'Peabody Award–winning journalist, filmmaker, and entrepreneur. CEO of Storyfarm, President of the AI Risk Network, and host of the For Humanity podcast.' },
-    { name: 'Liron Shapira', image: '/LironShapira.jpg', talk: 'AI Activism Funnel', bio: 'Rationalist, entrepreneur, and host of Doom Debates—a show encouraging top experts to answer why we\'re all about to die or not.' },
+    { name: 'Liron Shapira', image: '/LironShapira.jpg', talk: 'AI Activism Funnel', bio: 'Rationalist, entrepreneur, and host of Doom Debates – a show encouraging top experts to answer why we\'re all about to die or not.' },
     { name: 'David Wood', image: '/DavidWood.jpg', talk: 'Overcoming the AI Motivation Paradox', bio: 'Chair of London Futurists and author of 12 books about the future. Co-founded Symbian, whose OS powered the first 500 million smartphones.' },
     { name: 'Robert Whitfield', image: '/RobertWhitfield.jpg', talk: 'GAIGANow and AI Global Governance', bio: 'Campaigner for AI Global Governance for the past 7 years and convener of GAIGANow, the Global AI Governance Alliance.' },
     { name: 'Maxime Fournes', image: '/MaximeFournes.jpg', talk: 'Why Pause?', bio: 'Former Deep Learning & ML expert with 10+ years of experience. Now leading Pause, dedicated to promoting responsible AI development and raising awareness about catastrophic risks.' },
@@ -124,10 +124,14 @@ export default function PauseConLanding() {
         borderBottom: `1px solid ${colors.cardBorder}`
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: colors.text }}>
-            <img src="/Pause Logo.svg" alt="PauseCon Logo" style={{ width: '32px', height: '32px' }} />
-            <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
-          </a>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <a href="https://pauseai.info" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
+              <img src="/PauseAI-icon.svg" alt="PauseAI" style={{ width: '32px', height: '32px' }} />
+            </a>
+            <a href="/" style={{ textDecoration: 'none', color: colors.text }}>
+              <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
+            </a>
+          </div>
           
           {/* Desktop Menu */}
           {!isMobile && (
