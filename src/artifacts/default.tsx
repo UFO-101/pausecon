@@ -83,7 +83,7 @@ const pastEditions = [
   {
     title: 'PauseCon London',
     date: 'June 2025',
-    summary: 'The first PauseCon – a development and training conference for volunteers, culminating in our largest public protest to date.',
+    summary: 'The first PauseCon - a development and training conference for volunteers, culminating in our largest public protest to date.',
     image: '/london-2025-photos/LondonProtest2025.jpg',
     href: '/london-2025',
   },
@@ -548,7 +548,7 @@ export default function PauseConHome() {
             textAlign: 'center',
             letterSpacing: '-0.02em'
           }}>
-            Some previous PauseCon speakers
+            Past speakers include
           </h2>
           <p style={{
             textAlign: 'center',
