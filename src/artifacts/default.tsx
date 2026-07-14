@@ -20,7 +20,7 @@ const APPLY_TO_SPEAK_URL = 'https://pauseai-global.notion.site/32e5529b1fb34be88
 const whatToExpect = [
   {
     title: 'Strategy workshops',
-    description: 'Take part in exercises and discussions to learn from PauseAI and from your peers. Workshops will focus on communicating catastrophic risk, building and sustaining local chapters and groups, and coalition strategy and campaign planning.',
+    description: 'Take part in exercises and discussions to learn from PauseAI and from your peers. Workshops will focus on communicating catastrophic risk, building and sustaining local groups and chapters, and coalition strategy and campaign planning.',
   },
   {
     title: 'High-level talks',
@@ -28,34 +28,34 @@ const whatToExpect = [
   },
   {
     title: 'Community and networking',
-    description: 'Connect with other volunteers, organisers and concerned citizens — it is these who are at the centre of the PauseAI movement.',
+    description: 'Connect with the other volunteers, organisers, and concerned citizens who are at the heart of the PauseAI movement.',
   },
 ];
 
 const logistics = [
   {
     title: 'Dates',
-    description: 'Saturday 5 and Sunday 6 September 2026, beginning at 9am on both days. On Monday 7 September, there will be a panel event featuring prominent UK politicians with legislative expertise on AI.',
+    description: 'Saturday 5 and Sunday 6 September 2026, beginning at 9 am on both days. On Monday 7 September, there will be a panel event featuring prominent UK politicians with legislative expertise on AI.',
   },
   {
     title: 'Location',
-    description: 'London. The exact location will be communicated to approved attendees.',
+    description: 'London. The exact location will be communicated to approved participants.',
   },
   {
     title: 'Accommodation',
-    description: 'Accommodation is provided for three nights, from Friday 4 to Monday 7 September, in Greenwich, London, for up to 70 attendees. We recommend arriving on Friday night and planning to leave on Monday afternoon or evening.',
+    description: 'Accommodation is provided for three nights, from Friday 4 to Monday 7 September, for up to 70 participants. We prioritise accommodation for participants without access to accommodation in London. We recommend arriving on Friday night and planning to leave on Monday afternoon or evening.',
   },
   {
     title: 'Cost',
-    description: 'Participation and accommodation are free of charge, but we encourage participants to make a donation if they are able. We do not want cost to be a barrier to participation.',
+    description: "We encourage participants to make a donation towards costs if they can, but cost shouldn't be a barrier, so participation and accommodation are free of charge.",
   },
   {
     title: 'Transportation',
-    description: 'Attendees must arrange their own transportation to London.',
+    description: 'Participants must arrange their own transportation to London.',
   },
   {
     title: 'How to apply',
-    description: 'When you register, you will be asked several questions which will serve as your application. If approved, you will receive an email with a link to confirm your accommodation needs. Applications are reviewed on a rolling basis and earlier applications are more likely to be accepted — we may need to close registration early if we reach capacity.',
+    description: 'When you register, you will be asked several questions which will serve as your application. If approved, you will receive an email with a link to confirm your accommodation needs. Application deadline: 21 August 2026. Applications are reviewed on a rolling basis and earlier applications are more likely to be accepted – we may need to close registration early if we reach capacity.',
   },
 ];
 
@@ -83,7 +83,7 @@ const pastEditions = [
   {
     title: 'PauseCon London',
     date: 'June 2025',
-    summary: 'The first PauseCon — a development and training conference for volunteers, culminating in our largest public protest to date.',
+    summary: 'The first PauseCon – a development and training conference for volunteers, culminating in our largest public protest to date.',
     image: '/london-2025-photos/LondonProtest2025.jpg',
     href: '/london-2025',
   },
@@ -146,10 +146,14 @@ export default function PauseConHome() {
         borderBottom: `1px solid ${colors.cardBorder}`
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <a href="#home" onClick={(e) => scrollToSection(e, 'home')} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: colors.text }}>
-            <img src="/Pause Logo.svg" alt="PauseCon Logo" style={{ width: '32px', height: '32px' }} />
-            <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
-          </a>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <a href="https://pauseai.info" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
+              <img src="/PauseAI-icon.svg" alt="PauseAI" style={{ width: '32px', height: '32px' }} />
+            </a>
+            <a href="#home" onClick={(e) => scrollToSection(e, 'home')} style={{ textDecoration: 'none', color: colors.text }}>
+              <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
+            </a>
+          </div>
 
           {!isMobile && (
             <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
@@ -329,7 +333,7 @@ export default function PauseConHome() {
           color: colors.subtext,
           letterSpacing: '0.05em'
         }}>
-          London — 5–7 September 2026
+          London – 5–7 September 2026
         </h2>
         <p style={{
           fontSize: isMobile ? '1.05rem' : '1.2rem',
@@ -340,7 +344,7 @@ export default function PauseConHome() {
           lineHeight: '1.65',
           letterSpacing: '0.01em'
         }}>
-          PauseAI's flagship training event: three days of workshops, talks and direct action for those building the global movement to pause the development of superintelligence.
+          PauseAI's flagship training event: three days of workshops, talks and concrete outreach activities for those building the global movement to pause the development of superintelligence.
         </p>
 
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -429,10 +433,10 @@ export default function PauseConHome() {
             marginBottom: '1.5rem'
           }}>
             <p style={{ marginBottom: '1.25rem', lineHeight: '1.75', fontSize: '1rem', color: colors.subtext }}>
-              PauseCon is PauseAI's flagship training event: a three-day gathering for volunteers who want to take meaningful action on one of the most urgent issues of our time — ensuring that AI development does not outpace humanity's ability to keep it safe.
+              PauseCon is PauseAI's flagship training event: a three-day gathering for volunteers who want to take meaningful action on one of the most urgent issues of our time – ensuring that AI development does not outpace humanity's ability to keep it safe.
             </p>
             <p style={{ marginBottom: '1.25rem', lineHeight: '1.75', fontSize: '1rem', color: colors.subtext }}>
-              The conference will start with a packed weekend of workshops, talks and direct action. Attendees will receive training in community building, social media strategy and digital organising, along with a canvassing session to put those skills into practice. On Monday 7 September, attendees will have an opportunity to attend a panel discussion featuring prominent UK politicians with legislative expertise on AI.
+              The conference will start with a packed weekend of workshops, talks and concrete outreach activities. Participants will receive training in community building, effective communication and digital organising, along with a canvassing session to put those skills into practice. On Monday 7 September, participants will have an opportunity to attend a panel discussion featuring prominent UK politicians with legislative expertise on AI.
             </p>
             <p style={{ marginBottom: 0, lineHeight: '1.75', fontSize: '1rem', color: colors.subtext }}>
               Past editions brought together leading voices in AI safety, members of the European Parliament, and a growing international community of organisers. London 2026 will be our third edition.
@@ -448,7 +452,7 @@ export default function PauseConHome() {
               Who is PauseCon for?
             </h3>
             <p style={{ marginBottom: '1.25rem', lineHeight: '1.75', fontSize: '1rem', color: colors.subtext }}>
-              If you are concerned about the catastrophic risks posed by AI and are keen to do something about it, PauseCon is for you. We are looking for people who are willing and able to commit their time as a volunteer.
+              If you are concerned about the catastrophic risks posed by AI and want to empower yourself and others to organise effectively and peacefully as citizens, PauseCon is for you. We are looking for people who are willing and able to commit their time as volunteers.
             </p>
             <p style={{ marginBottom: 0, lineHeight: '1.75', fontSize: '1rem', color: colors.subtext }}>
               PauseCon is about preparing volunteers to make an impact in their communities. If you are ready to move beyond discussion and contribute to tangible political change, PauseCon is for you.
@@ -499,7 +503,7 @@ export default function PauseConHome() {
             textAlign: 'center',
             letterSpacing: '-0.02em'
           }}>
-            Useful information
+            Logistics
           </h2>
           <div style={{
             display: 'grid',
@@ -531,9 +535,6 @@ export default function PauseConHome() {
             borderRadius: '0.75rem',
             padding: isMobile ? '1.5rem' : '2rem'
           }}>
-            <p style={{ marginBottom: '1.25rem', fontSize: '1.05rem', fontWeight: '600', color: colors.text }}>
-              Application deadline: 21 August 2026
-            </p>
             <a
               href={SIGNUP_URL}
               target="_blank"
@@ -561,7 +562,7 @@ export default function PauseConHome() {
                 letterSpacing: '0.02em'
               }}
             >
-              Apply to attend
+              Apply to participate
             </a>
           </div>
         </div>
@@ -577,7 +578,7 @@ export default function PauseConHome() {
             textAlign: 'center',
             letterSpacing: '-0.02em'
           }}>
-            Past speakers have included
+            Some previous PauseCon speakers
           </h2>
           <p style={{
             textAlign: 'center',
@@ -586,15 +587,15 @@ export default function PauseConHome() {
             marginBottom: '3rem'
           }}>
             A selection of voices from previous editions. The London 2026 lineup will be announced in due course.
-            {' '}Want to be part of it?{' '}
+            {' '}If you have significant expertise to contribute, you can{' '}
             <a
               href={APPLY_TO_SPEAK_URL}
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: colors.primary, textDecoration: 'none', fontWeight: '600' }}
             >
-              Apply to speak →
-            </a>
+              apply to speak at PauseCon London 2026
+            </a>.
           </p>
           <div style={{
             display: 'grid',
@@ -727,11 +728,16 @@ export default function PauseConHome() {
         fontSize: '0.9rem'
       }}>
         <p style={{ marginBottom: '1rem' }}>Organised by</p>
-        <div style={{ marginBottom: '1.5rem' }}>
+        <div style={{ marginBottom: '1rem' }}>
           <a href="https://pauseai.info" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block' }}>
             <img src="/PauseAI-logo-white.svg" alt="PauseAI" style={{ height: '48px', width: 'auto' }} />
           </a>
         </div>
+        <p style={{ marginBottom: '1.5rem' }}>
+          <a href="https://pauseai.info" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary, textDecoration: 'none' }}>
+            pauseai.info
+          </a>
+        </p>
         <p style={{ marginBottom: 0 }}>© {currentYear} PauseAI</p>
       </footer>
     </div>
