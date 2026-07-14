@@ -36,9 +36,9 @@ export default function PauseConLanding() {
   const team = [
     { name: 'Moritz Pohl', title: 'Volunteer', org: 'PauseAI', image: '/MoritzPohl.jpg' },
     { name: 'Joseph Miller', title: 'Director', org: 'PauseAI UK', image: '/JosephMiller.jpg' },
-    { name: 'Didier Coeurnelle', title: 'Co-organizer', org: 'PauseCon', image: '/DidierCoeurnelle.jpg' },
-    { name: 'Irina Tavera', title: 'Organizing Director', org: 'PauseAI Global', image: '/IrinaTavera.jpg' },
-    { name: 'Matilda Da Rui', title: 'Deputy Director', org: 'PauseAI UK', image: '/MatildaDaRui.jpeg' },
+    { name: 'Didier Coeurnelle', title: 'Co-organiser', org: 'PauseCon', image: '/DidierCoeurnelle.jpg' },
+    { name: 'Irina Tavera', title: 'Organising Director', org: 'PauseAI Global', image: '/IrinaTavera.jpg' },
+    { name: 'Matilda da Rui', title: 'Deputy Director', org: 'PauseAI UK', image: '/MatildaDaRui.jpeg' },
   ];
 
   const speakers = [
@@ -56,7 +56,7 @@ export default function PauseConLanding() {
 
   const facilitators = [
     { name: 'John Sherman', image: '/JohnSherman.jpeg', talk: 'Big Tent Public Engagement', bio: 'Peabody Award–winning journalist, filmmaker, and entrepreneur. CEO of Storyfarm, President of the AI Risk Network, and host of the For Humanity podcast.' },
-    { name: 'Liron Shapira', image: '/LironShapira.jpg', talk: 'AI Activism Funnel', bio: 'Rationalist, entrepreneur, and host of Doom Debates—a show encouraging top experts to answer why we\'re all about to die or not.' },
+    { name: 'Liron Shapira', image: '/LironShapira.jpg', talk: 'AI Activism Funnel', bio: 'Rationalist, entrepreneur, and host of Doom Debates – a show encouraging top experts to answer why we\'re all about to die or not.' },
     { name: 'David Wood', image: '/DavidWood.jpg', talk: 'Overcoming the AI Motivation Paradox', bio: 'Chair of London Futurists and author of 12 books about the future. Co-founded Symbian, whose OS powered the first 500 million smartphones.' },
     { name: 'Robert Whitfield', image: '/RobertWhitfield.jpg', talk: 'GAIGANow and AI Global Governance', bio: 'Campaigner for AI Global Governance for the past 7 years and convener of GAIGANow, the Global AI Governance Alliance.' },
     { name: 'Maxime Fournes', image: '/MaximeFournes.jpg', talk: 'Why Pause?', bio: 'Former Deep Learning & ML expert with 10+ years of experience. Now leading Pause, dedicated to promoting responsible AI development and raising awareness about catastrophic risks.' },
@@ -124,10 +124,14 @@ export default function PauseConLanding() {
         borderBottom: `1px solid ${colors.cardBorder}`
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: colors.text }}>
-            <img src="/Pause Logo.svg" alt="PauseCon Logo" style={{ width: '32px', height: '32px' }} />
-            <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
-          </a>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <a href="https://pauseai.info" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
+              <img src="/PauseAI-icon.svg" alt="PauseAI" style={{ width: '32px', height: '32px' }} />
+            </a>
+            <a href="/" style={{ textDecoration: 'none', color: colors.text }}>
+              <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
+            </a>
+          </div>
           
           {/* Desktop Menu */}
           {!isMobile && (
@@ -369,7 +373,7 @@ export default function PauseConLanding() {
               PauseCon 2 is <strong style={{ color: colors.text }}>not a typical conference</strong>. It is a <strong style={{ color: colors.text }}>high-impact, 3-day strategic summit</strong> designed to move the needle and position the European Union as a global initiator for an AI Pause.
             </p>
             <p style={{ lineHeight: '1.75', fontSize: '1rem', color: colors.subtext, marginBottom: 0 }}>
-              This event is not just about training, it's about <strong style={{ color: colors.text }}>real-world impact</strong>. If you are ready to move beyond discussion and contribute to tangible political change, this is your event.
+              This event is about training, but also about <strong style={{ color: colors.text }}>real-world impact</strong>. If you are ready to move beyond discussion and contribute to tangible political change, this is your event.
             </p>
           </div>
 
@@ -389,8 +393,8 @@ export default function PauseConLanding() {
             marginBottom: '2.5rem'
           }}>
             {[
-              { title: 'Exclusive Access & Direct Lobbying', desc: 'The summit\'s centerpiece is a public conference held inside the European Parliament. This is a unique platform to present our policy proposals and engage directly with EU policymakers, their staff, and the Brussels political community.' },
-              { title: 'Strategic Workshops', desc: 'This is a participatory event. You won\'t just be briefed; you will co-create the strategy. We will draft the AI Moratorium Charter, finalise the policy documents for MEPs, and plan our public actions.' },
+              { title: 'Exclusive Access & Direct Lobbying', desc: 'The summit\'s centrepiece is a public conference held inside the European Parliament. This is a unique platform to present our policy proposals and engage directly with EU policymakers, their staff, and the Brussels political community.' },
+              { title: 'Strategic Workshops', desc: 'This is a participatory event. You will be briefed, but also co-create the strategy. We will draft the AI Moratorium Charter, finalise the policy documents for MEPs, and plan our public actions.' },
               { title: 'High-Visibility Public Action', desc: 'We will hold a major, coordinated demonstration at the Place du Luxembourg, directly in front of the Parliament. Our goal is to gain maximum media and political attention.' },
               { title: 'Community & Networking', desc: 'Connect with the dedicated experts, activists, and organisers who form the core of the PauseAI movement. Forge the alliances we need for the long-term international campaign.' }
             ].map((item, index) => (
@@ -790,7 +794,7 @@ export default function PauseConLanding() {
             Our Schedule is Built to Maximise Impact
           </h2>
           <p style={{ fontSize: '1.1rem', textAlign: 'center', marginBottom: '3rem', color: colors.subtext, maxWidth: '800px', margin: '0 auto 3rem' }}>
-            Three intensive days of strategy, policymaking, and public action at the heart of European power.
+            Three intensive days of strategy, policymaking, and civic action at the heart of European power.
           </p>
         </div>
       </section> */}

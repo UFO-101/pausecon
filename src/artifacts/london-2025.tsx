@@ -27,8 +27,8 @@ const speakers = [
 
 const hosts = [
   { name: 'Joseph Miller', title: 'Director', org: 'PauseAI UK', image: '/JosephMiller.jpg' },
-  { name: 'Ella Hughes', title: 'Organizer', org: 'PauseAI UK', image: '/EllaHughes.jpg' },
-  { name: 'Tom Bibby', title: 'Organizer', org: 'PauseAI UK', image: '/TomBibby.jpg' },
+  { name: 'Ella Hughes', title: 'Organiser', org: 'PauseAI UK', image: '/EllaHughes.jpg' },
+  { name: 'Tom Bibby', title: 'Organiser', org: 'PauseAI UK', image: '/TomBibby.jpg' },
 ];
 
 const galleryPhotos = [
@@ -86,10 +86,14 @@ export default function PauseConLondon2025() {
         borderBottom: `1px solid ${colors.cardBorder}`
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: colors.text }}>
-            <img src="/Pause Logo.svg" alt="PauseCon Logo" style={{ width: '32px', height: '32px' }} />
-            <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
-          </a>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <a href="https://pauseai.info" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
+              <img src="/PauseAI-icon.svg" alt="PauseAI" style={{ width: '32px', height: '32px' }} />
+            </a>
+            <a href="/" style={{ textDecoration: 'none', color: colors.text }}>
+              <span style={{ fontSize: '1.5rem', fontWeight: '600' }}>PauseCon</span>
+            </a>
+          </div>
           <a
             href="/"
             style={{
@@ -178,10 +182,10 @@ export default function PauseConLondon2025() {
             border: `1px solid ${colors.cardBorder}`
           }}>
             <p style={{ marginBottom: '1.25rem', lineHeight: '1.75', fontSize: '1rem', color: colors.subtext }}>
-              The first PauseCon was a development and training conference for PauseAI volunteers held in Shoreditch, London. Across two days, attendees learned about <strong style={{ color: colors.text }}>community building, social media strategy and digital organizing</strong>.
+              The first PauseCon was a development and training conference for PauseAI volunteers held in Shoreditch, London. Across two days, attendees learned about <strong style={{ color: colors.text }}>community building, social media strategy and digital organising</strong>.
             </p>
             <p style={{ lineHeight: '1.75', fontSize: '1rem', color: colors.subtext, marginBottom: 0 }}>
-              The event culminated in our largest public protest to date — calling on world leaders to act on existential AI risk.
+              The event culminated in our largest public protest to date, calling on world leaders to act on existential AI risk.
             </p>
           </div>
         </div>
