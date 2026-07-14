@@ -726,14 +726,12 @@ export default function PauseConHome() {
         color: colors.subtext,
         fontSize: '0.9rem'
       }}>
-        <div style={{ marginBottom: '1rem' }}>
-          <a href="/Pause Logo.svg" onClick={(e) => e.preventDefault()} style={{ display: 'inline-block' }}>
-            <img src="/Pause Logo.svg" alt="PauseAI" style={{ width: '40px', height: '40px', opacity: 0.7 }} />
+        <p style={{ marginBottom: '1rem' }}>Organised by</p>
+        <div style={{ marginBottom: '1.5rem' }}>
+          <a href="https://pauseai.info" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block' }}>
+            <img src="/PauseAI-logo-white.svg" alt="PauseAI" style={{ height: '48px', width: 'auto' }} />
           </a>
         </div>
-        <p style={{ marginBottom: '0.5rem' }}>
-          Organised by <a href="https://pauseai.info" target="_blank" rel="noopener noreferrer" style={{ color: colors.primary, textDecoration: 'none' }}>PauseAI</a>
-        </p>
         <p style={{ marginBottom: 0 }}>© {currentYear} PauseAI</p>
       </footer>
     </div>
