@@ -532,7 +532,7 @@ export default function PauseConHome() {
                 letterSpacing: '0.02em'
               }}
             >
-              Apply to participate
+              Apply Now
             </a>
           </div>
         </div>
