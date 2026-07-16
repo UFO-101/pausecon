@@ -689,6 +689,33 @@ export default function PauseConHome() {
         </div>
       </section>
 
+      {/* Supported by */}
+      <section id="supported-by" style={{ padding: isMobile ? '3rem 1.5rem' : '4rem 2rem' }}>
+        <div style={{
+          maxWidth: '700px',
+          margin: '0 auto',
+          textAlign: 'center',
+          backgroundColor: colors.cardBackground,
+          border: `1px solid ${colors.cardBorder}`,
+          borderRadius: '0.75rem',
+          padding: isMobile ? '2rem 1.5rem' : '2.5rem',
+        }}>
+          <p style={{
+            fontSize: '0.75rem',
+            fontWeight: '600',
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: colors.primary,
+            marginBottom: '0.75rem'
+          }}>
+            Supported by
+          </p>
+          <p style={{ fontSize: '0.95rem', color: colors.subtext, lineHeight: '1.65', marginBottom: 0 }}>
+            PauseCon London 2026 is made possible in great part by the generous support of <strong style={{ color: colors.text }}>Bill Wildi</strong>.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer style={{
         padding: isMobile ? '3rem 1.5rem' : '4rem 2rem',
