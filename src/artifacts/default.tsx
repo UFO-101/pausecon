@@ -16,6 +16,8 @@ const colors = {
 
 const SIGNUP_URL = 'https://luma.com/4be2eqz9?utm_source=pausecon-website';
 const APPLY_TO_SPEAK_URL = 'https://pauseai-global.notion.site/32e5529b1fb34be887a2deb34f7b459b?pvs=105';
+const PROGRAMME_PDF_URL = '/pdfs/PauseCon%20London%202026%20Programme.pdf';
+const PROGRAMME_THUMB_URL = '/pdfs/PauseCon%20London%202026%20Programme.jpg';
 
 const whatToExpect = [
   {
@@ -496,6 +498,90 @@ export default function PauseConHome() {
                 </p>
               </div>
             ))}
+          </div>
+
+          <div style={{
+            display: 'flex',
+            flexDirection: isMobile ? 'column' : 'row',
+            alignItems: 'center',
+            gap: isMobile ? '1.75rem' : '3rem',
+            backgroundColor: colors.cardBackground,
+            border: `1px solid ${colors.cardBorder}`,
+            borderRadius: '0.75rem',
+            padding: isMobile ? '1.75rem 1.5rem' : '2.5rem 3rem',
+            marginBottom: '2.5rem'
+          }}>
+            <a
+              href={PROGRAMME_PDF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the PauseCon London 2026 programme (PDF)"
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-6px) rotate(-1deg)';
+                e.currentTarget.style.boxShadow = '0 30px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 152, 30, 0.25)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) rotate(0deg)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.5)';
+              }}
+              style={{
+                display: 'block',
+                flexShrink: 0,
+                width: isMobile ? '180px' : '220px',
+                borderRadius: '0.5rem',
+                overflow: 'hidden',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
+                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5)',
+                transition: 'transform 0.25s ease, box-shadow 0.25s ease'
+              }}
+            >
+              <img
+                src={PROGRAMME_THUMB_URL}
+                alt="First page of the PauseCon London 2026 programme"
+                loading="lazy"
+                style={{ display: 'block', width: '100%', height: 'auto' }}
+              />
+            </a>
+            <div style={{ flex: 1, textAlign: isMobile ? 'center' : 'left' }}>
+              <h2 style={{
+                fontSize: isMobile ? '1.75rem' : '2.25rem',
+                fontWeight: '600',
+                marginBottom: '0.75rem',
+                letterSpacing: '-0.02em'
+              }}>
+                Programme
+              </h2>
+              <p style={{ fontSize: '1rem', marginBottom: '1.5rem', color: colors.subtext, lineHeight: '1.7' }}>
+                The full three-day schedule for PauseCon London 2026, 5-7 September.
+              </p>
+              <a
+                href={PROGRAMME_PDF_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseOver={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 30px rgba(255, 152, 30, 0.35)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+                style={{
+                  display: 'inline-block',
+                  padding: '0.875rem 2rem',
+                  backgroundColor: colors.primary,
+                  color: colors.background,
+                  borderRadius: '0.5rem',
+                  textDecoration: 'none',
+                  fontWeight: '600',
+                  fontSize: '1rem',
+                  letterSpacing: '0.02em',
+                  transition: 'all 0.2s ease'
+                }}
+              >
+                Download Programme (PDF)
+              </a>
+            </div>
           </div>
 
           <div style={{
